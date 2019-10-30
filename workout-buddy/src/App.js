@@ -7,7 +7,7 @@ import PublicFeatures from "./PublicFeatures";
 function App() {
   return (
     <div className="App">
-      <MainScreen />
+      <MainScreen className="Background"/>
       <PublicFeatures className="FeaturesBackground"/>
     </div>
   );

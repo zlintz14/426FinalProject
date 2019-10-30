@@ -1,29 +1,41 @@
-import React from 'react';
-import './App.scss'
-import { MDBBtn, MDBCard, MDBCardImage, MDBCardBody, MDBCardText } from 'mdbreact';
+import React from "react";
+import "./App.scss";
+import {
+  MDBBtn,
+  MDBCard,
+  MDBCardImage,
+  MDBCardBody,
+  MDBCardText
+} from "mdbreact";
+import running from "./running.jpg";
+import machines from "./machines.jpg";
+import freeWeights from "./freeWeights.jpg";
 
-function Workouts(){
-    return(
-        <>
-        <MDBCard>
-            <MDBCardImage src="./machines.jpg"></MDBCardImage>
-            <MDBCardBody>Machines</MDBCardBody>
-            <MDBCardText>Here are our favorite machine workouts!</MDBCardText>
-        </MDBCard>
-        <span></span>
-         <MDBCard>
-         <MDBCardImage src="running.jpg" test></MDBCardImage>
-         <MDBCardBody>Running</MDBCardBody>
-         <MDBCardText>From marathons to intervals, check out our favorite running routines!</MDBCardText>
-     </MDBCard>
-        <span></span>
-     <MDBCard>
-            <MDBCardImage src="freeWeights.jpg"></MDBCardImage>
-            <MDBCardBody>Free Weights</MDBCardBody>
-            <MDBCardText>Go here to make like that raw egg you had for breakfast and get yolked!</MDBCardText>
-        </MDBCard>
-        </>
-    )
+function Workouts() {
+  return (
+    <>
+      <MDBCard className="WorkoutCard">
+        <img src={running} wave></img>
+        <MDBCardBody>Running</MDBCardBody>
+        <MDBCardText>
+          From marathons to intervals, check out our favorite running routines!
+        </MDBCardText>
+      </MDBCard>
+      <MDBCard className="WorkoutCard">
+        <MDBCardImage src={machines}></MDBCardImage>
+        <MDBCardBody>Machines</MDBCardBody>
+        <MDBCardText>Here are our favorite machine workouts!</MDBCardText>
+      </MDBCard>
+      <MDBCard>
+        <MDBCardImage src={freeWeights}></MDBCardImage>
+        <MDBCardBody>Free Weights</MDBCardBody>
+        <MDBCardText>
+          Go here to make like that raw egg you had for breakfast and get
+          yolked!
+        </MDBCardText>
+      </MDBCard>
+    </>
+  );
 }
 
 export default Workouts;

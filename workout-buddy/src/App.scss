@@ -1,8 +1,9 @@
+$primary: #f8a12f;
 .App {
   text-align: center;
+  background-color: $primary;
 }
 
-$primary: #f8a12f;
 $secondary: #40ffa6;
 
 .App-logo {
@@ -26,14 +27,14 @@ $secondary: #40ffa6;
 
 .Background{
   height: 100vh;
-}
-
-.Background::after{
-  content: "";
   background: url("corgis.gif");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
+}
+
+.Background::after{
+  content: "";
   opacity: 0.5;
   top: 0;
   left: 0;
@@ -46,7 +47,7 @@ $secondary: #40ffa6;
 .Title{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: bold;
-  font-size: 20em;
+  font-size: calc(10px + 20vmin);
   margin: auto;
   margin-top: 10vh;
   color: $primary;
@@ -62,8 +63,13 @@ $secondary: #40ffa6;
     margin-left: 85%;
     /* font-size: 7em; */
   }
+
 .FeaturesBackground{
   background-color: $primary;
+}
+
+.WorkoutCard{
+  margin-bottom: 4vh;
 }
 
 
