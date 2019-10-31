@@ -51,7 +51,7 @@ $secondary: #40ffa6;
   margin: auto;
   margin-top: 10vh;
   color: $primary;
-
+  text-shadow: 0px 0px 15px rgba(0,0,0,0.9);
 }
 
 @font-face {
@@ -59,18 +59,27 @@ $secondary: #40ffa6;
   src: url(langdon.regular-webfont.woff);
   }
 
-  .Login{
+.Login{
     margin-left: 85%;
     /* font-size: 7em; */
   }
 
 .FeaturesBackground{
   background-color: $primary;
-}
 
 .WorkoutCard{
   margin-bottom: 4vh;
 }
 
 
-  
+
+
+.FeaturesBackground{
+  background-color: #32BAAC;
+}
+
+.featureImage {
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
