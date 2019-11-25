@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss'
+import '../App.scss'
 import { MDBRow, MDBCard, MDBCol, MDBBtnGroup, MDBBtn, MDBContainer,MDBIcon } from 'mdbreact';
 import Testimonials from './Testimonials';
 import Workouts from './Workouts';
@@ -30,7 +30,7 @@ function PublicFeatures() {
                         <MDBCol lg="7" style={{ paddingLeft: '5%', marginTop: '5%', marginBottom: 'auto' }}>
                             <MDBRow className="mb-3 fluid">
                             <MDBCol size="2">
-                                <i class="fas fa-dumbbell"></i>                        
+                                <i className="fas fa-dumbbell"></i>                        
                             </MDBCol>
                             <MDBCol xl="10" md="11" size="10">
                                 <h5 className="font-weight-bold mb-3">Practicality</h5>
@@ -43,7 +43,7 @@ function PublicFeatures() {
                             </MDBRow>
                             <MDBRow className="mb-3">
                             <MDBCol size="2">
-                                <i class="fas fa-dumbbell"></i>                        
+                                <i className="fas fa-dumbbell"></i>                        
                             </MDBCol>
                             <MDBCol xl="10" md="11" size="10">
                                 <h5 className="font-weight-bold mb-3">Beginner-Friendliness</h5>
@@ -55,7 +55,7 @@ function PublicFeatures() {
                             </MDBRow>
                             <MDBRow className="mb-3">
                             <MDBCol size="2">
-                                <i class="fas fa-dumbbell"></i>                        
+                                <i className="fas fa-dumbbell"></i>                        
                             </MDBCol>
                             <MDBCol xl="10" md="11" size="10">
                                 <h5 className="font-weight-bold mb-3">Accessibility</h5>

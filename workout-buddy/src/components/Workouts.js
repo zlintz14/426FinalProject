@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.scss";
+import "../App.scss";
 import {
   MDBBtn,
   MDBCard,
@@ -7,9 +7,9 @@ import {
   MDBCardBody,
   MDBCardText
 } from "mdbreact";
-import running from "./running.jpg";
-import machines from "./machines.jpg";
-import freeWeights from "./freeWeights.jpg";
+import running from "../images/running.jpg";
+import machines from "../images/machines.jpg";
+import freeWeights from "../images/freeWeights.jpg";
 
 function Workouts() {
   return (
