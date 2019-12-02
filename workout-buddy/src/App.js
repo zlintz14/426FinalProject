@@ -12,9 +12,16 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import axios from 'axios';
+
+const pubRoot = new axios.create({
+  baseURL: 'http://localhost:3000/public'
+});
 
 
 function App() {
+
+
   function handleClick(){
     // e.preventDefault;
     console.log('handleClick called')
