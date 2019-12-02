@@ -7,6 +7,7 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import WorkoutSearch from "./components/WorkoutSearch";
 import FullMainPage from './components/FullMainPage'
+import User from './components/User'
 import {
   BrowserRouter as Router,
   Switch,
@@ -45,6 +46,10 @@ function App() {
           <Route path="/signup">
             <Signup />
           </Route>
+          <Route path="/user">
+            <User />
+          </Route>
+
         </Switch>
     </Router>
 
