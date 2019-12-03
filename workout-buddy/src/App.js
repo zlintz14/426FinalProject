@@ -4,6 +4,7 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import FullMainPage from './components/FullMainPage'
 import User from './components/User'
+import Calendar from './components/Calendar';
 import {
   BrowserRouter as Router,
   Switch,
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path="/user">
             <User />
+          </Route>
+          <Route path="/calendar">
+            <Calendar />
           </Route>
 
         </Switch>
