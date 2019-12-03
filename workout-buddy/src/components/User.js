@@ -34,7 +34,11 @@ function User(props) {
   }, [firstName]);
   return (
     //   <div></div>
-    <div>{<p>Hello {firstName + " " + lastName}!</p>}</div>
+    <div>
+      <div>{<p>Hello {firstName + " " + lastName}!</p>}</div>
+      <h1>butts</h1>
+    </div>
+
   );
 }
 
