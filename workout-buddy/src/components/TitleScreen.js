@@ -1,7 +1,6 @@
 import React from "react";
 import "../App.scss";
 import { MDBBtn } from "mdbreact";
-import Login from "./Login";
 import { Link } from "react-router-dom";
 
 function TitleScreen() {

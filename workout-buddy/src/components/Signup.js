@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { MDBBtn, MDBInput, MDBCard, MDBContainer } from "mdbreact";
-import Axios from "axios";
+// import Axios from "axios";
 
-const createUrl = "http://localhost/3000/account";
+// const createUrl = "http://localhost/3000/account";
 
 function Signup(props) {
   const [firstName, setFirstName] = useState("");
