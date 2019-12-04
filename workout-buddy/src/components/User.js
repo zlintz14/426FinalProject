@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import Navbar from './Navbar'
+import {
+  MDBContainer,
+} from "mdbreact";
 
 let myStorage = window.localStorage;
 let jwt = myStorage.getItem("jwt");
@@ -35,8 +39,13 @@ function User(props) {
   return (
     //   <div></div>
     <div>
-      <div>{<p>Hello {firstName + " " + lastName}!</p>}</div>
-      <h1>butts</h1>
+      <Navbar />
+      <MDBContainer className="text-center mt-5 pt-5">
+          <h2>Welcome back, {firstName + " " + lastName}!</h2>
+          <br/>
+          <h5>This is your personal user page. Use the top bar to navigate to your workouts!</h5>
+          <br/>
+      </MDBContainer>
     </div>
 
   );
