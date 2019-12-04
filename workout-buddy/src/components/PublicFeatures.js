@@ -5,7 +5,9 @@ import {
   MDBCard,
   MDBCol,
   MDBContainer,
+  MDBCardBody,  MDBBtn, MDBCardText
 } from "mdbreact";
+import { Link } from "react-router-dom";
 // import Testimonials from './Testimonials';
 // import Workouts from './Workouts';
 // import PrivateFeatures from './PrivateFeatures';
@@ -102,7 +104,7 @@ function PublicFeatures() {
             style={{ width: "120%", marginLeft: "-10%" }}
           >
             <MDBCol lg="6">
-              <MDBCard style={{ width: "30rem", marginLeft: "auto" }}>
+              <MDBCard style={{ marginTop: "60px", width: "30rem", marginLeft: "auto" }}>
                 <img
                   src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2017/04/10/12/youngwoman.jpg?w968"
                   className="img-fluid featureImage"
@@ -111,10 +113,62 @@ function PublicFeatures() {
               </MDBCard>
             </MDBCol>
             <MDBCol lg="6">
-              <MDBCard style={{ width: "30rem", marginRight: "auto" }}>
-                <h2 className="my-4">Feature 1</h2>
-                <p>This is a description for feature 1.</p>
+              
+              <MDBCard style={{ padding:"3px", margin: "20px", width: "30rem", marginRight: "auto" }}>
+                <h2 className=" my-4 ">Music Integration</h2>
+                <p>Connect our app to your Spotify account and listen to your favorite music!</p>
               </MDBCard>
+              <MDBCard style={{ padding:"3px", margin: "20px", width: "30rem", marginRight: "auto" }}>
+                <h2 className=" my-4">Work Out Selection</h2>
+                <p>Search through San certified workouts!</p>
+              </MDBCard>
+              <MDBCard style={{ padding:"3px", margin: "20px", width: "30rem", marginRight: "auto" }}>
+                <h2 className=" my-4">Add Workouts to Google Calender</h2>
+                <p>Select work outs to keep track of your progress!</p>
+              </MDBCard>
+             
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </section>
+      <section className="magazine-section my-5 text-center">
+        <h1 className="h1-responsive font-weight-bold my-5">Get Started Today!</h1>
+        <MDBContainer style={{ marginLeft: "auto", marginRight: "auto" }}>
+          <MDBRow
+            className="center"
+            style={{ width: "120%", marginLeft: "-10%" }}
+          >
+            <MDBCol lg="6">
+              <MDBCard style={{ height: "100px", marginTop: "60px", width: "30rem", marginLeft: "auto" }}>
+                <img
+                  src="https://media.self.com/photos/58d2ca37d92aa7631e120f7c/4:3/w_728,c_limit/plank-at-gym.jpg"
+                  className="img-fluid featureImage"
+                  alt=""
+                />
+              </MDBCard>
+            </MDBCol>
+            <MDBCol lg="6">
+              
+              <MDBCard style={{  marginTop: "50px",  width: "30rem", marginRight: "auto" }}>
+                <h2 className=" my-4 ">Click here to sign up!</h2>
+                <MDBCardBody>
+                <Link to="/signup">
+                <MDBBtn >Sign Up</MDBBtn>
+                </Link>
+                </MDBCardBody>
+                
+              </MDBCard>
+              <MDBCard style={{  marginTop: "20px",  width: "30rem", marginRight: "auto" }}>
+                <h2 className=" my-4 ">Or Log In To Your Account</h2>
+                <MDBCardBody>
+                <Link to="/login">
+                <MDBBtn >Log In</MDBBtn>
+                </Link>
+                </MDBCardBody>
+                
+              </MDBCard>
+              
+             
             </MDBCol>
           </MDBRow>
         </MDBContainer>
