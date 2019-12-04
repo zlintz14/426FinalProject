@@ -104,7 +104,7 @@ function PublicFeatures() {
             style={{ width: "120%", marginLeft: "-10%" }}
           >
             <MDBCol lg="6">
-              <MDBCard style={{ marginTop: "60px", width: "30rem", marginLeft: "auto" }}>
+              <MDBCard style={{ marginTop: "130px", width: "30rem", marginLeft: "auto" }}>
                 <img
                   src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2017/04/10/12/youngwoman.jpg?w968"
                   className="img-fluid featureImage"
@@ -114,17 +114,17 @@ function PublicFeatures() {
             </MDBCol>
             <MDBCol lg="6">
               
-              <MDBCard style={{ padding:"3px", margin: "20px", width: "30rem", marginRight: "auto" }}>
+              <MDBCard style={{ padding:"15px", margin: "20px", width: "30rem", marginRight: "auto" }}>
                 <h2 className=" my-4 ">Music Integration</h2>
-                <p>Connect our app to your Spotify account and listen to your favorite music!</p>
+                <p className="grey-text">Connect our app to your Spotify account and listen to your favorite music!</p>
               </MDBCard>
-              <MDBCard style={{ padding:"3px", margin: "20px", width: "30rem", marginRight: "auto" }}>
+              <MDBCard style={{ padding:"15px", margin: "20px", width: "30rem", marginRight: "auto" }}>
                 <h2 className=" my-4">Work Out Selection</h2>
-                <p>Search through San certified workouts!</p>
+                <p className="grey-text">Search through San certified workouts!</p>
               </MDBCard>
-              <MDBCard style={{ padding:"3px", margin: "20px", width: "30rem", marginRight: "auto" }}>
+              <MDBCard style={{ padding:"15px", margin: "20px", width: "30rem", marginRight: "auto" }}>
                 <h2 className=" my-4">Add Workouts to Google Calender</h2>
-                <p>Select work outs to keep track of your progress!</p>
+                <p className="grey-text">Select work outs to keep track of your progress!</p>
               </MDBCard>
              
             </MDBCol>
@@ -139,7 +139,7 @@ function PublicFeatures() {
             style={{ width: "120%", marginLeft: "-10%" }}
           >
             <MDBCol lg="6">
-              <MDBCard style={{ height: "100px", marginTop: "60px", width: "30rem", marginLeft: "auto" }}>
+              <MDBCard style={{  height: "100px", marginTop: "60px", width: "30rem", marginLeft: "auto" }}>
                 <img
                   src="https://media.self.com/photos/58d2ca37d92aa7631e120f7c/4:3/w_728,c_limit/plank-at-gym.jpg"
                   className="img-fluid featureImage"
@@ -147,6 +147,7 @@ function PublicFeatures() {
                 />
               </MDBCard>
             </MDBCol>
+            
             <MDBCol lg="6">
               
               <MDBCard style={{  marginTop: "50px",  width: "30rem", marginRight: "auto" }}>
