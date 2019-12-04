@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav } from 'mdbreact';
 import { Link } from "react-router-dom";
 
@@ -8,13 +7,13 @@ const Navbar = () => {
   return (
       <div>
         <MDBNavbar style={bgPink} fixed="top">
-            <MDBNavbarBrand href="/user" style={{color: '#09d3ac'}}>
-                <strong>User Home</strong>
+            <MDBNavbarBrand href="/user">
+                <strong className="navbaritem">User Home</strong>
             </MDBNavbarBrand>
             <MDBNavbarNav left>
             <Link to="/workoutspage">
                 <li className="nav-item">
-                    <div className="nav-link" style={{color: '#09d3ac'}} >Workouts</div>
+                    <div className="nav-link"><strong className="navbaritem">Workouts</strong></div>
                 </li>            
             </Link>
             </MDBNavbarNav>
