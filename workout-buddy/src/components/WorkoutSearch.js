@@ -30,8 +30,8 @@ let result = axios.get("http://localhost:3000/public/workouts/", {
 
 
 function WorkoutSearch(props) {
-  let result = getWorkouts();
-  console.log(workouts);
+  // let result = getWorkouts();
+  // console.log(workouts);
   const [searchTerm, setSearchTerm] = useState("");
   const [list, setList] = useState(workouts);
 
