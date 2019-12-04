@@ -6,10 +6,10 @@ import PublicFeatures  from "./PublicFeatures";
 function FullMainPage(props) {
 
     return (
-   <div className="App">
-     <TitleScreen className="Background"/>
-     <PublicFeatures className="FeaturesBackground"/>
-     </div>  
+      <div className="App">
+        <TitleScreen className="Background"/>
+        <PublicFeatures className="FeaturesBackground"/>
+      </div>  
     );
 }
 export default FullMainPage;

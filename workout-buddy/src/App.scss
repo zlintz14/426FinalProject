@@ -110,4 +110,44 @@ html,
 body {
   height: 100%;
   width: 100%;
+
+}
+
+
+// Workouts Page styles
+
+.workoutsPageBody {
+  background: whitesmoke;
+}
+
+.jumbotronTitle {
+  margin-top: 5vh;
+  margin-bottom: 2.5vh;
+  height: 33vh;
+}
+
+.jumbotronView {
+  margin-bottom: 2vh;
+  background: white;
+}
+
+.workoutview {
+  height: 53vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.noSearchResultsMessage {
+  margin-top: 2rem;
+}
+
+.navbaritem {
+  color: #09d3ac;
+  margin-left: 0.5rem;
+
+  transition: 0.4s;
+}
+
+.navbaritem:hover {
+  color: $primary;
 }
