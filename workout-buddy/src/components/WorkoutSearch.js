@@ -49,7 +49,7 @@ function WorkoutSearch(props) {
               <MDBCardText>
                 {workout.description}
               </MDBCardText>
-              <MDBBtn className="btn-deep-orange">MDBBtn</MDBBtn>
+              <MDBBtn className="is-primary-button">MDBBtn</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         )}

@@ -18,7 +18,6 @@ function User(props) {
   //You'll want to create states for any other properties
   //you receive from the get request
   useEffect(() => {
-    console.log("use effect called");
     axios
       .get("http://localhost:3000/account/status", {
         headers: {
