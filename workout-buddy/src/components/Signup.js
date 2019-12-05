@@ -39,6 +39,7 @@ function Signup(props) {
   };
 
   let createNewUser = async function(e) {
+    let wasError = false;
     e.preventDefault();
     if (allFieldsValid()) {
       axios
@@ -53,10 +54,13 @@ function Signup(props) {
         .catch(e => {
           setErrorMessage(e.response.data.msg);
           setShowError(true);
+          wasError = true;
+          console.log('catch called');
         })
         .then(() => {
-          if (allFieldsValid()) {
-            window.location.href = 'http://localhost:3001/user';
+          if (!wasError && allFieldsValid()) {
+            window.location.href = 'http://localhost:3001/login';
+            console.log('then called');
           }
         });
     } else {
@@ -99,9 +103,9 @@ function Signup(props) {
                 type="password"
               ></MDBInput>
             </div>
-          <MDBBtn type="submit" onClick={createNewUser}>
-            Sign Up!
-          </MDBBtn>
+            <MDBBtn type="submit" onClick={createNewUser}>
+              Sign Up!
+            </MDBBtn>
           </form>
           {showError ? (
             <p className="text-center text-danger font-weight-bold">
