@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { MDBBtn, MDBInput, MDBCard, MDBContainer } from "mdbreact";
+import React, { useState } from 'react';
+import { MDBBtn, MDBInput, MDBCard, MDBContainer } from 'mdbreact';
 // import Axios from "axios";
 
 // const createUrl = "http://localhost/3000/account";
 
 function Signup(props) {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordVerification, setPasswordVerification] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordVerification, setPasswordVerification] = useState('');
   const [showError, setShowError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-  const axios = require("axios");
+  const [errorMessage, setErrorMessage] = useState('');
+  const axios = require('axios');
 
   let doPasswordsMatch = function() {
     if (password === passwordVerification) {
@@ -28,30 +28,36 @@ function Signup(props) {
     if (
       !(firstName && lastName && username && password && passwordVerification)
     ) {
-      setErrorMessage("Please fill out all fields");
+      setErrorMessage('Please fill out all fields');
       return false;
     } else if (!doPasswordsMatch()) {
-      setErrorMessage("Passwords must match");
+      setErrorMessage('Passwords must match');
       return false;
     }
     setShowError(false);
     return true;
   };
 
-  let createNewUser = async function() {
+  let createNewUser = async function(e) {
+    e.preventDefault();
     if (allFieldsValid()) {
       axios
-        .post("http://localhost:3000/account/create", {
-          "name": username,
-          "pass": password,
-          "data": {
-            "firstName": firstName,
-            "lastName": lastName
+        .post('http://localhost:3000/account/create', {
+          name: username,
+          pass: password,
+          data: {
+            firstName: firstName,
+            lastName: lastName
           }
         })
         .catch(e => {
           setErrorMessage(e.response.data.msg);
           setShowError(true);
+        })
+        .then(() => {
+          if (allFieldsValid()) {
+            window.location.href = 'http://localhost:3001/user';
+          }
         });
     } else {
       setShowError(true);
@@ -64,35 +70,39 @@ function Signup(props) {
         <MDBCard className="login-card">
           <h1
             className="is-primary font-weight-bold"
-            style={{ margin: "auto" }}
+            style={{ margin: 'auto' }}
           >
             Create Account
           </h1>
-          <div className="mx-3">
-            <MDBInput
-              onChange={e => setFirstName(e.target.value)}
-              label="First Name"
-            ></MDBInput>
-            <MDBInput
-              onChange={e => setLastName(e.target.value)}
-              label="Last Name"
-            ></MDBInput>
-            <MDBInput
-              onChange={e => setUsername(e.target.value)}
-              label="Username"
-            ></MDBInput>
-            <MDBInput
-              onChange={e => setPassword(e.target.value)}
-              label="Password"
-              type="password"
-            ></MDBInput>
-            <MDBInput
-              onChange={e => setPasswordVerification(e.target.value)}
-              label="Confirm Password"
-              type="password"
-            ></MDBInput>
-          </div>
-          <MDBBtn onClick={createNewUser}>Sign Up!</MDBBtn>
+          <form onSubmit={createNewUser}>
+            <div className="mx-3">
+              <MDBInput
+                onChange={e => setFirstName(e.target.value)}
+                label="First Name"
+              ></MDBInput>
+              <MDBInput
+                onChange={e => setLastName(e.target.value)}
+                label="Last Name"
+              ></MDBInput>
+              <MDBInput
+                onChange={e => setUsername(e.target.value)}
+                label="Username"
+              ></MDBInput>
+              <MDBInput
+                onChange={e => setPassword(e.target.value)}
+                label="Password"
+                type="password"
+              ></MDBInput>
+              <MDBInput
+                onChange={e => setPasswordVerification(e.target.value)}
+                label="Confirm Password"
+                type="password"
+              ></MDBInput>
+            </div>
+          <MDBBtn type="submit" onClick={createNewUser}>
+            Sign Up!
+          </MDBBtn>
+          </form>
           {showError ? (
             <p className="text-center text-danger font-weight-bold">
               {errorMessage}
