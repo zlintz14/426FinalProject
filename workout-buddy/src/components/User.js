@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import {
   MDBContainer,
 } from "mdbreact";
+import LineGraph from './LineGraph'
 
 let myStorage = window.localStorage;
 let jwt = myStorage.getItem("jwt");
@@ -25,7 +26,6 @@ function User(props) {
         }
       })
       .then(response => {
-        console.log(response);
         setFirstName(titleCase(response.data.user.data.firstName));
         setLastName(titleCase(response.data.user.data.lastName));
         //You'll want to set states for any other properties
@@ -45,6 +45,7 @@ function User(props) {
           <h5>This is your personal user page. Use the top bar to navigate to your workouts!</h5>
           <br/>
       </MDBContainer>
+      <LineGraph />
     </div>
 
   );

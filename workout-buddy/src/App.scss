@@ -1,5 +1,11 @@
 $primary: #f8a12f;
 $secondary: #40ffa6;
+
+:export{
+  primary: $primary;
+  secondary: $secondary;
+}
+
 .App {
   text-align: center;
   // background-color: $primary;
@@ -157,4 +163,15 @@ body {
 
 .navbaritem:hover {
   color: $primary;
+}
+
+.center-div{
+  margin: 0 auto;
+  width: 50%;
+}
+
+.line-graph{
+  width: 50%;
+  height: 50%;
+  text-align: center;
 }
