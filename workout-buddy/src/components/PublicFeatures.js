@@ -172,46 +172,6 @@ function PublicFeatures() {
               {features ? (
                 <div>
                   {renderFeatures(features)}
-                  {/* <MDBCard
-                    style={{
-                      padding: '15px',
-                      margin: '20px',
-                      width: '30rem',
-                      marginRight: 'auto'
-                    }}
-                  >
-                    <h2 className=" my-4 ">Music Integration</h2>
-                    <p className="grey-text">
-                      Connect our app to your Spotify account and listen to your
-                      favorite music!
-                    </p>
-                  </MDBCard>
-                  <MDBCard
-                    style={{
-                      padding: '15px',
-                      margin: '20px',
-                      width: '30rem',
-                      marginRight: 'auto'
-                    }}
-                  >
-                    <h2 className=" my-4">Work Out Selection</h2>
-                    <p className="grey-text">
-                      Search through San certified workouts!
-                    </p>
-                  </MDBCard>
-                  <MDBCard
-                    style={{
-                      padding: '15px',
-                      margin: '20px',
-                      width: '30rem',
-                      marginRight: 'auto'
-                    }}
-                  >
-                    <h2 className=" my-4">Add Workouts to Google Calender</h2>
-                    <p className="grey-text">
-                      Select work outs to keep track of your progress!
-                    </p>
-                  </MDBCard> */}
                 </div>
               ) : (
                 <div>Loading</div>
