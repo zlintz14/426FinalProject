@@ -18,7 +18,7 @@ function LineGraph() {
   };
 
   let getData = function() {
-    let maxYval = Math.max(...weightData);
+    // let maxYval = Math.max(...weightData);
     return {
       labels: labels,
       options: {
@@ -27,8 +27,8 @@ function LineGraph() {
           yAxes: [
             {
               ticks: {
-                suggestedMin: 0,
-                suggestedMax: maxYval
+                suggestedMin: 0
+                // suggestedMax: maxYval
               }
             }
           ]
@@ -36,13 +36,28 @@ function LineGraph() {
       },
       datasets: [
         {
-          label: 'Weights',
+          label: 'Deadlift',
           fill: false,
           borderColor: variables.primary,
           pointBackgroundColor: variables.primary,
           pointRadius: 3,
-          borderCapStyle: 'butt',
-          data: weightData
+          data: deadliftData
+        },
+        {
+          label: 'Squat',
+          fill: false,
+          borderColor: '#eb34d8',
+          pointBackgroundColor: '#eb34d8',
+          pointRadius: 3,
+          data: squatData
+        },
+        {
+          label: 'Bench',
+          fill: false,
+          borderColor: '#39d3fa',
+          pointBackgroundColor: '#39d3fa',
+          pointRadius: 3,
+          data: benchData
         },
         {
           label: 'Running',
@@ -58,7 +73,9 @@ function LineGraph() {
   };
   //   data['datasets']data[4] = 16;
   const [stats, setStats] = useState();
-  const [weightData, setWeightData] = useState();
+  const [benchData, setBenchData] = useState();
+  const [squatData, setSquatData] = useState();
+  const [deadliftData, setDeadliftData] = useState();
   const [runningData, setRunningData] = useState();
   const [labels, setLabels] = useState();
   useEffect(() => {
@@ -66,32 +83,37 @@ function LineGraph() {
     let xVals = [];
     let yVals = [];
     if (stats) {
-      let lifting = stats.lifting;
+      let deadlifting = stats.deadlifting;
+      let squatting = stats.squatting;
+      let benching = stats.benching;
       let running = stats.running;
-      let tempLabels = [];
-      let lEntries = Object.entries(lifting);
-      let lVals = [];
-      lEntries.forEach(entry => {
-        tempLabels.push(entry[0]);
-        let justVals = entry[1].map(obj => parseInt(obj.statValue, 10));
-        lVals.push(Math.max(...justVals));
-      });
-      setWeightData(lVals);
-      setLabels(tempLabels);
+      let deadliftEntries = Object.entries(deadlifting);
+      let squatEntries = Object.entries(squatting);
+      let benchEntries = Object.entries(benching);
+      setSquatData(getWeightValues(squatEntries));
+      setBenchData(getWeightValues(benchEntries));
+      setDeadliftData(getWeightValues(deadliftEntries));
+
+
+      // let lVals = [];
+      // lEntries.forEach(entry => {
+      //   tempLabels.push(entry[0]);
+      //   let justVals = entry[1].map(obj => parseInt(obj.statValue, 10));
+      //   lVals.push(Math.max(...justVals));
+      // });
+      // setWeightData(lVals);
+      
       let rEntries = Object.entries(running);
       let rVals = [];
+      let tempLabels = [];
       rEntries.forEach(entry => {
+        tempLabels.push(entry[0]);
         let justVals = entry[1].map(obj => parseInt(obj.statValue, 10));
         rVals.push(justVals.reduce((a, b) => a + b, 0));
       });
       console.log('rvals', rVals);
+      setLabels(tempLabels);
       setRunningData(rVals);
-      //   stats.forEach(stat => {
-      //     xVals.push(stat.time);
-      //     yVals.push(stat.value);
-      //   });
-      //   setWeightData(yVals);
-      //   setLabels(xVals);
     }
   }, [stats]);
 
@@ -111,9 +133,20 @@ function LineGraph() {
         console.log(e);
       });
   }, []);
+
+  let getWeightValues = function(objectEntries) {
+    let lVals = [];
+    objectEntries.forEach(entry => {
+      let justVals = entry[1].map(obj => parseInt(obj.statValue, 10));
+      lVals.push(Math.max(...justVals));
+    });
+    console.log(lVals);
+    return lVals;
+  };
+
   return (
     <div className="center-div">
-      {labels && weightData ? (
+      {labels && benchData ? (
         <div>
           <Line className="line-graph" data={getData()} />
         </div>

@@ -12,7 +12,7 @@ $secondary: #40ffa6;
 }
 
 .is-primary{
-  color: $primary;
+  color: $primary !important;
 }
 
 .is-secondary{
@@ -23,7 +23,7 @@ $secondary: #40ffa6;
   background-color: $primary !important;
 }
 .is-secondary-button{
-  background-color: $secondary;
+  background-color: $secondary !important;
 }
 
 .App-logo {
