@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { MDBBtn, MDBCard, MDBCardBody, MDBIcon, MDBCardTitle, MDBCardText, MDBCol, MDBContainer } from 'mdbreact';
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBAutocomplete, MDBContainer } from 'mdbreact';
 import { Link } from "react-router-dom";
 
 let myStorage = window.localStorage;
@@ -82,7 +82,15 @@ function WorkoutSearch(props) {
           <div className="active-pink-4 mb-4">
             <input className="form-control" type="text" placeholder="Search" aria-label="Search" onChange={debounce}/>
           </div>
-        </MDBContainer>
+          {/* <MDBAutocomplete
+            data={list}
+            label="Search workouts"
+            icon="heart"
+            clear
+            id="input"
+            getValue={this.logValue}
+          /> */}
+      </MDBContainer>
       </div>
       <div className="workoutview">
         {list ? (<div>{renderWorkouts(list)}</div>) : (<div>Loading...</div>)}
