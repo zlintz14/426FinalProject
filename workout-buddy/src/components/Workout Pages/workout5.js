@@ -3,7 +3,7 @@ import Navbar from '../Navbar';
 import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCardTitle, MDBCardImage, MDBCardBody, MDBCardText } from "mdbreact";
 import { MDBCard,  MDBBtn } from 'mdbreact';
 import { Link } from 'react-router-dom';
-const workout5 = () => {
+const workout2 = () => {
     return (
         <div>
             <Navbar />
@@ -12,11 +12,11 @@ const workout5 = () => {
                     <MDBCol>
                     <MDBJumbotron className="text-center ">
                         <MDBCardTitle className="card-title h4 pb-2">
-                        <strong>Beginner's Boxing Workout</strong>
+                        <strong>Advanced Boxing Workout</strong>
                         </MDBCardTitle>
 
                         <MDBCardImage
-                        src="https://wallpapermemory.com/uploads/595/boxing-wallpaper-hd-3840x2400-452102.jpg"
+                        src="https://wallpaperaccess.com/full/308647.jpg"
                         className="img-fluid card-img-top"
                         />
                         <MDBCardBody>
@@ -33,24 +33,7 @@ const workout5 = () => {
 
                         <MDBCol className="d-flex justify-content-center mt-4" md="12">
                             <MDBCol md="3" className="d-flex justify-content-around">
-                            <a href="#"><MDBIcon
-                                fab
-                                icon="linkedin-in"
-                                className="grey-text"
-                                size="lg"
-                            /></a>
-                            <a href="#"><MDBIcon
-                                fab
-                                icon="twitter"
-                                className="grey-text"
-                                size="lg"
-                            /></a>
-                            <a href="#"><MDBIcon
-                                fab
-                                icon="facebook-f"
-                                className="grey-text"
-                                size="lg"
-                            /></a>
+                           
                             </MDBCol>
                         </MDBCol>
 
@@ -83,11 +66,11 @@ const workout5 = () => {
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 1 mile<br></br>
+                Run 2 mile<br></br>
                 3-minute round: Basic jab, cross, and hook punches<br></br>
-                Rest 30 seconds x5<br></br>
+                Rest 30 seconds x8<br></br>
                 3-minute round: Speed punches<br></br>
-                Rest 30 seconds x5<br></br>
+                Rest 30 seconds x8<br></br>
               </p>
               
               <a href="https://expertboxing.com/the-perfect-boxing-stance" 
@@ -121,9 +104,9 @@ const workout5 = () => {
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-              3-minute round on heavy bag x3<br></br>
-              3-minute round on speed bag x3<br></br>
-              10 pushups, 10 jump squats x3<br></br>
+              3-minute round on heavy bag x5<br></br>
+              3-minute round on speed bag x5<br></br>
+              10 pushups, 10 jump squats x5<br></br>
               200 situps<br></br>
               </p>
               
@@ -160,9 +143,9 @@ const workout5 = () => {
               </MDBCardTitle>
               <p className="dark-grey-text">
                 
-              3-minute round speed punches x3 <br></br>
-              3-minute hard punches x3<br></br>
-              run 1 mile<br></br>
+              3-minute round speed punches x5 <br></br>
+              3-minute hard punches x5<br></br>
+              Run 2 mile<br></br>
               200 situps<br></br>
               </p>
               
@@ -202,10 +185,10 @@ const workout5 = () => {
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 2 miles<br></br>
-                3 rounds shadow box<br></br>
-                5 rounds of<br></br>
-                4 sprints for 15 seconds<br></br>
+                Run 3 miles<br></br>
+                5 rounds shadow box<br></br>
+                7 rounds of<br></br>
+                6 sprints for 15 seconds<br></br>
               </p>
               
           
@@ -245,10 +228,10 @@ const workout5 = () => {
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 1 mile<br></br>
-                3-minute round speed punches x3<br></br>
-                3-minute rounds of slips and jabs only x3<br></br>
-                Plank 1 min x3<br></br>
+                Run 3 mile<br></br>
+                3-minute round speed punches x5<br></br>
+                5-minute rounds of slips and jabs only x5<br></br>
+                Plank 1 min x5<br></br>
               </p>
              
           
@@ -272,4 +255,4 @@ const workout5 = () => {
     );
 };
 
-export default workout5;
+export default workout2;

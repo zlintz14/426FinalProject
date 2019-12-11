@@ -63,7 +63,7 @@ function App() {
             <AdvancedBoxingPage />
           </Route>
           <Route path="/workout6">
-            <BeginnerSwimmingPage />
+            <AdvancedSwimmingPage />
           </Route>
           
 

@@ -10,6 +10,7 @@ let timeout;
 let workoutsObj = {};
 
 function WorkoutSearch(props) {
+
   const [list, setList] = useState();
   useEffect(() => {
     axios.get('http://localhost:3000/private/workouts', {

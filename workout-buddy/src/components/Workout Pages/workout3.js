@@ -12,11 +12,11 @@ const workout3 = () => {
                     <MDBCol>
                     <MDBJumbotron className="text-center ">
                         <MDBCardTitle className="card-title h4 pb-2">
-                        <strong>Beginner's Swimming Workout</strong>
+                        <strong>Advanced Swimming Workout</strong>
                         </MDBCardTitle>
 
                         <MDBCardImage
-                        src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                        src="https://www.liveabout.com/thmb/B5M42o8BDxZYofZQPtagIpAtAzY=/3032x2274/smart/filters:no_upscale()/GettyImages-120541159-593767f75f9b58d58ac0d58a.jpg"
                         className="img-fluid card-img-top"
                         />
                         <MDBCardBody>
@@ -24,16 +24,16 @@ const workout3 = () => {
                             Swimming
                         </MDBCardTitle>
                         <MDBCardText>
-                        What is the best boxing workout? A boxing workout can increase endurance, strength, and speed. Our forum members have put together great workouts, talk about different methods, myths, and what kind of workouts they followed. Try them out!
+                        Below are a collection of workouts and swim sets for sprinters, for distance swimmers, for those looking to improve their kick, and everyone else in between.
                             <br/>
                             <br/>
 
-                            Boxing can help to improve your cardio stamina, endurance, balance, and coordination.
+                            One of the benefits of swimming is the endless variety of ways that you can train in the water.
                         </MDBCardText>
 
                         <MDBCol className="d-flex justify-content-center mt-4" md="12">
                             <MDBCol md="3" className="d-flex justify-content-around">
-                            <a href="#"><MDBIcon
+                            {/* <a href="#"><MDBIcon
                                 fab
                                 icon="linkedin-in"
                                 className="grey-text"
@@ -50,7 +50,7 @@ const workout3 = () => {
                                 icon="facebook-f"
                                 className="grey-text"
                                 size="lg"
-                            /></a>
+                            /></a> */}
                             </MDBCol>
                         </MDBCol>
 
