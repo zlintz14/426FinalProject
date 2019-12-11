@@ -25,18 +25,14 @@ function WorkoutSearch(props) {
           "id": 0,
           "type": "strength",
           "days": [1, 3, 5],
-          "expanded": false,
           "short-description": "StrongLifts 5x5 is the most popular strengthening program for beginners that is programmed for 3 days a week. This workout relies on compound movements (bench-press, squats, deadlifts, and overhead-press) and is perfect for adapting your body for weight training.",
-          "long-description": "",
           "readMoreLink": "https://stronglifts.com/5x5/#gref"
       },
       "Beginner's Running Plan": {
           "id": 1,
           "type": "cardio",
           "days": [1, 2, 4, 5],
-          "expanded": false,
           "short-description": "A beginner's running program that eases beginners into running. This is a good workout plan for both runners who have not run in a while and people who have never run before.",
-          "long-description": "",
           "readMoreLink": ""
       },
       "Beginner's Boxing Workout": {
@@ -45,7 +41,6 @@ function WorkoutSearch(props) {
           "days": [1, 2, 4, 5],
           "expanded": false,
           "short-description": "This is a basic boxing training plan for beginners, great for people who have never boxed before and for people who have not boxed in a while. This workout focuses on upper body and cardiovascular endurance, working different muscle groups than running.",
-          "long-description": "",
           "readMoreLink": ""
       }
   }
