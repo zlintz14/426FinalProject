@@ -72,7 +72,7 @@ function WorkoutSearch(props) {
                  {workoutsObj[workout]["short-description"]}
                </MDBCardText>
                <Link to={"workout" + workoutsObj[workout].id}>
-                <MDBBtn className="is-primary-button">Expand</MDBBtn>
+                <MDBBtn className="is-primary-button">Read More</MDBBtn>
                </Link>
              </MDBCardBody>
            </MDBCard>
@@ -87,7 +87,8 @@ function WorkoutSearch(props) {
       setList(Object.keys(workoutsObj));
       return;
     } else {
-      let filteredList = list.filter((w) => {
+      let filteredList = Object.keys(workoutsObj).filter((w) => {
+        console.log()
         return w.toLowerCase().indexOf(searchValue.toLowerCase()) > -1;
       });
       setList(filteredList);
