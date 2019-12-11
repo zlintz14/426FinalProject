@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from './Navbar'
+import SpotifyBar from './SpotifyBar'
 import {
   MDBContainer,
 } from "mdbreact";
@@ -48,7 +49,11 @@ function User(props) {
           </h5>
           <br/>
       </MDBContainer>
+<<<<<<< HEAD
       <LineGraph />
+=======
+      <SpotifyBar />
+>>>>>>> spotify-api
     </div>
 
   );
