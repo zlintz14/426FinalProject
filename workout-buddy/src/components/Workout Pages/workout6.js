@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '../Navbar';
 import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCardTitle, MDBCardImage, MDBCardBody, MDBCardText } from "mdbreact";
@@ -12,45 +13,28 @@ const workout6 = () => {
                     <MDBCol>
                     <MDBJumbotron className="text-center ">
                         <MDBCardTitle className="card-title h4 pb-2">
-                        <strong>Beginner's Boxing Workout</strong>
+                        <strong>Beginner's Swimming Workout</strong>
                         </MDBCardTitle>
 
                         <MDBCardImage
-                        src="https://wallpapermemory.com/uploads/595/boxing-wallpaper-hd-3840x2400-452102.jpg"
+                        src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
                         className="img-fluid card-img-top"
                         />
                         <MDBCardBody>
                         <MDBCardTitle className="black-text h5 m-4">
-                            Boxing
+                            Swimming
                         </MDBCardTitle>
                         <MDBCardText>
-                        What is the best boxing workout? A boxing workout can increase endurance, strength, and speed. Our forum members have put together great workouts, talk about different methods, myths, and what kind of workouts they followed. Try them out!
+                        Below are a collection of workouts and swim sets for sprinters, for distance swimmers, for those looking to improve their kick, and everyone else in between.
                             <br/>
                             <br/>
 
-                            Boxing can help to improve your cardio stamina, endurance, balance, and coordination.
+                            One of the benefits of swimming is the endless variety of ways that you can train in the water.
                         </MDBCardText>
 
                         <MDBCol className="d-flex justify-content-center mt-4" md="12">
                             <MDBCol md="3" className="d-flex justify-content-around">
-                            <a href="#"><MDBIcon
-                                fab
-                                icon="linkedin-in"
-                                className="grey-text"
-                                size="lg"
-                            /></a>
-                            <a href="#"><MDBIcon
-                                fab
-                                icon="twitter"
-                                className="grey-text"
-                                size="lg"
-                            /></a>
-                            <a href="#"><MDBIcon
-                                fab
-                                icon="facebook-f"
-                                className="grey-text"
-                                size="lg"
-                            /></a>
+                          
                             </MDBCol>
                         </MDBCol>
 
@@ -77,22 +61,21 @@ const workout6 = () => {
           <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
             <div>
               <h5 className='black-text'>
-                 Monday
+              <MDBIcon icon='swimmer' /> Monday
               </h5>
               <MDBCardTitle tag='h3' className='pt-2'>
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 1 mile<br></br>
-                3-minute round: Basic jab, cross, and hook punches<br></br>
-                Rest 30 seconds x5<br></br>
-                3-minute round: Speed punches<br></br>
-                Rest 30 seconds x5<br></br>
+                8 x 50 meters with 1 min rest<br></br>
+                4 x 25 sprints<br></br>
+                4 x 200 <br></br>
+                
               </p>
               
-              <a href="https://expertboxing.com/the-perfect-boxing-stance" 
+              <a href="https://www.active.com/triathlon/articles/10-elements-of-a-perfect-freestyle-stroke" 
               target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> boxing stance</a>
+              <MDBIcon icon='clone left' /> Swimming form</a>
             
         
               
@@ -115,21 +98,20 @@ const workout6 = () => {
           <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
             <div>
               <h5 className='black-text'>
-                 Tuesday
+              <MDBIcon icon='swimmer' /> Tuesday
               </h5>
               <MDBCardTitle tag='h3' className='pt-2'>
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-              3-minute round on heavy bag x3<br></br>
-              3-minute round on speed bag x3<br></br>
-              10 pushups, 10 jump squats x3<br></br>
-              200 situps<br></br>
+                10 x 50 meters with 45 sec rest<br></br>
+                10 x 25 sprints<br></br>
+                8 x 200 <br></br>
               </p>
               
-              <a href="https://www.builtlean.com/2011/02/10/active-rest-in-between-exercises-makes-a-difference/" 
+              <a href="https://www.enjoy-swimming.com/swimming-strokes.html" 
               target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> importance of active rest</a>
+              <MDBIcon icon='clone left' /> Swimming Strokes</a>
             
         
              
@@ -153,22 +135,21 @@ const workout6 = () => {
           <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
             <div>
               <h5 className='black-text'>
-                 Wednesday
+              <MDBIcon icon='swimmer' /> Wednesday
               </h5>
               <MDBCardTitle tag='h3' className='pt-2'>
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
                 
-              3-minute round speed punches x3 <br></br>
-              3-minute hard punches x3<br></br>
-              run 1 mile<br></br>
-              200 situps<br></br>
+                15 x 50 meters with 15 sec rest<br></br>
+                10 x 25 sprints<br></br>
+                8 x 200 <br></br>
               </p>
               
-              <a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/interval-training/art-20044588" 
+              <a href="https://www.active.com/triathlon/articles/proper-breathing-technique-for-swimming-875008" 
               target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> interval training</a>
+              <MDBIcon icon='clone left' /> Breathing Technique</a>
             
         
               
@@ -196,23 +177,22 @@ const workout6 = () => {
           <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
             <div>
               <h5 className='black-text'>
-                 Thursday
+              <MDBIcon icon='swimmer' /> Thursday
               </h5>
               <MDBCardTitle tag='h3' className='pt-2'>
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 2 miles<br></br>
-                3 rounds shadow box<br></br>
-                5 rounds of<br></br>
-                4 sprints for 15 seconds<br></br>
+                15 x 50 meters with 15 sec rest<br></br>
+                10 x 25 sprints<br></br>
+                4 x 200 <br></br>
               </p>
               
           
 
-              <a href="https://expertboxing.com/how-to-slip-punches" 
+              <a href="https://www.enjoy-swimming.com/freestyle-swimming-technique.html" 
               target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> interval training</a>
+              <MDBIcon icon='clone left' /> Freestyle techniques</a>
             
 
               
@@ -239,23 +219,22 @@ const workout6 = () => {
           <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
             <div>
               <h5 className='black-text'>
-                 Friday
+              <MDBIcon icon='swimmer' /> Friday
               </h5>
               <MDBCardTitle tag='h3' className='pt-2'>
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 1 mile<br></br>
-                3-minute round speed punches x3<br></br>
-                3-minute rounds of slips and jabs only x3<br></br>
-                Plank 1 min x3<br></br>
+                15 x 50 meters with 20 sec rest<br></br>
+                10 x 25 sprints<br></br>
+                4 x 200 <br></br>
               </p>
              
           
         
-              <a href="http://www.westsidemma.net/single-post/2016/04/24/12-Sparring-Tips-That-Will-Make-You-Better" 
+              <a href="https://www.teamusa.org/USA-Triathlon/News/Blogs/Multisport-Lab/2012/May/29/simple-swim-workouts" 
               target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> sparring tips</a>
+              <MDBIcon icon='clone left' /> New Workouts</a>
             </div>
           </div>
         </MDBCard>
