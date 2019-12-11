@@ -3,7 +3,7 @@ import Navbar from '../Navbar';
 import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCardTitle, MDBCardImage, MDBCardBody, MDBCardText } from "mdbreact";
 import { MDBCard,  MDBBtn } from 'mdbreact';
 import { Link } from 'react-router-dom';
-const workout1 = () => {
+const workout4 = () => {
     return (
         <div>
             <Navbar />
@@ -12,11 +12,11 @@ const workout1 = () => {
                     <MDBCol>
                     <MDBJumbotron className="text-center ">
                         <MDBCardTitle className="card-title h4 pb-2">
-                        <strong>Beginner's Running Plan</strong>
+                        <strong>Advanced Running Plan</strong>
                         </MDBCardTitle>
 
                         <MDBCardImage
-                        src="https://images.squarespace-cdn.com/content/v1/54faf350e4b0f473c20ce261/1425940917937-6JJ94AP6KCHPEQLL63SW/ke17ZwdGBToddI8pDm48kHH9S2ID7_bpupQnTdrPcoF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RRB5rUELEv7EY2n0AZOrEupxpSyqbqKSgmzcCPWV5WMiQ/running+image+2.jpg?format=1500w"
+                        src="https://i.pinimg.com/originals/1a/69/e5/1a69e504b53a026bec6e88d3f93f4897.jpg"
                         className="img-fluid card-img-top"
                         />
                         <MDBCardBody>
@@ -33,7 +33,7 @@ const workout1 = () => {
 
                         <MDBCol className="d-flex justify-content-center mt-4" md="12">
                             <MDBCol md="3" className="d-flex justify-content-around">
-                           
+                            
                             </MDBCol>
                         </MDBCol>
 
@@ -66,9 +66,9 @@ const workout1 = () => {
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 1 mile<br></br>
+                Run 2 mile<br></br>
                 Walk 1 mile<br></br>
-                Sprint 10 seconds, walk 30 seconds 5x<br></br>
+                Sprint 10 seconds, walk 30 seconds 10x<br></br>
                 
               </p>
               
@@ -140,9 +140,9 @@ const workout1 = () => {
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 1.5 mile<br></br>
-                Walk .5 mile<br></br>
-                Sprint 10 seconds, walk 30 seconds 10x<br></br>
+                Run 3 mile<br></br>
+                Walk 1 mile<br></br>
+                Sprint 10 seconds, walk 30 seconds 15x<br></br>
                 
               </p>
               
@@ -182,7 +182,7 @@ const workout1 = () => {
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 2 miles<br></br>
+                Run 4 miles<br></br>
                 Walk 1 mile<br></br>
                 4 sprints for 15 seconds<br></br>
                 
@@ -224,7 +224,7 @@ const workout1 = () => {
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 3 miles<br></br>
+                Run 5 miles<br></br>
                 Walk 1 mile<br></br>
                 4 sprints for 15 seconds<br></br>
                 
@@ -252,4 +252,4 @@ const workout1 = () => {
     );
 };
 
-export default workout1;
+export default workout4;

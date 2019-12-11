@@ -1,9 +1,10 @@
+
 import React from 'react';
 import Navbar from '../Navbar';
 import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCardTitle, MDBCardImage, MDBCardBody, MDBCardText } from "mdbreact";
 import { MDBCard,  MDBBtn } from 'mdbreact';
 import { Link } from 'react-router-dom';
-const workout1 = () => {
+const workout6 = () => {
     return (
         <div>
             <Navbar />
@@ -12,28 +13,28 @@ const workout1 = () => {
                     <MDBCol>
                     <MDBJumbotron className="text-center ">
                         <MDBCardTitle className="card-title h4 pb-2">
-                        <strong>Beginner's Running Plan</strong>
+                        <strong>Beginner's Swimming Workout</strong>
                         </MDBCardTitle>
 
                         <MDBCardImage
-                        src="https://images.squarespace-cdn.com/content/v1/54faf350e4b0f473c20ce261/1425940917937-6JJ94AP6KCHPEQLL63SW/ke17ZwdGBToddI8pDm48kHH9S2ID7_bpupQnTdrPcoF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RRB5rUELEv7EY2n0AZOrEupxpSyqbqKSgmzcCPWV5WMiQ/running+image+2.jpg?format=1500w"
+                        src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
                         className="img-fluid card-img-top"
                         />
                         <MDBCardBody>
                         <MDBCardTitle className="black-text h5 m-4">
-                            Easy way to start running
+                            Swimming
                         </MDBCardTitle>
                         <MDBCardText>
-                        Running is a great way to get fit, feel better and even form new relationships with other runners. Starting a new running habit doesn’t have to be hard — all it takes is a comfortable pair of shoes and a willingness to move a little or a lot, all at your own pace. The Well Guide makes it easy to get started, get inspired and stay on track. Are you ready? Let’s go!
+                        Below are a collection of workouts and swim sets for sprinters, for distance swimmers, for those looking to improve their kick, and everyone else in between.
                             <br/>
                             <br/>
 
-                            
+                            One of the benefits of swimming is the endless variety of ways that you can train in the water.
                         </MDBCardText>
 
                         <MDBCol className="d-flex justify-content-center mt-4" md="12">
                             <MDBCol md="3" className="d-flex justify-content-around">
-                           
+                          
                             </MDBCol>
                         </MDBCol>
 
@@ -60,21 +61,21 @@ const workout1 = () => {
           <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
             <div>
               <h5 className='black-text'>
-                <MDBIcon icon='running' /> Monday
+              <MDBIcon icon='swimmer' /> Monday
               </h5>
               <MDBCardTitle tag='h3' className='pt-2'>
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 1 mile<br></br>
-                Walk 1 mile<br></br>
-                Sprint 10 seconds, walk 30 seconds 5x<br></br>
+                8 x 50 meters with 1 min rest<br></br>
+                4 x 25 sprints<br></br>
+                4 x 200 <br></br>
                 
               </p>
               
-              <a href="https://www.runnersworld.com/nutrition-weight-loss/a20853304/what-do-i-eat-before-my-race/" 
+              <a href="https://www.active.com/triathlon/articles/10-elements-of-a-perfect-freestyle-stroke" 
               target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> food before a run</a>
+              <MDBIcon icon='clone left' /> Swimming form</a>
             
         
               
@@ -97,23 +98,23 @@ const workout1 = () => {
           <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
             <div>
               <h5 className='black-text'>
-                <MDBIcon icon='bed' /> Tuesday
+              <MDBIcon icon='swimmer' /> Tuesday
               </h5>
               <MDBCardTitle tag='h3' className='pt-2'>
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Rest<br></br>
-                <br></br>
-                <br></br>
+                10 x 50 meters with 45 sec rest<br></br>
+                10 x 25 sprints<br></br>
+                8 x 200 <br></br>
               </p>
               
-              <a href="https://www.theactivetimes.com/why-rest-days-are-just-important-working-out" 
+              <a href="https://www.enjoy-swimming.com/swimming-strokes.html" 
               target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> Refule with rest</a>
+              <MDBIcon icon='clone left' /> Swimming Strokes</a>
             
-              
         
+             
             </div>
           </div>
         </MDBCard>
@@ -134,108 +135,106 @@ const workout1 = () => {
           <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
             <div>
               <h5 className='black-text'>
-                <MDBIcon icon='running' /> Wednesday
+              <MDBIcon icon='swimmer' /> Wednesday
               </h5>
               <MDBCardTitle tag='h3' className='pt-2'>
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 1.5 mile<br></br>
-                Walk .5 mile<br></br>
-                Sprint 10 seconds, walk 30 seconds 10x<br></br>
                 
+                15 x 50 meters with 15 sec rest<br></br>
+                10 x 25 sprints<br></br>
+                8 x 200 <br></br>
               </p>
               
-              <a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/interval-training/art-20044588" 
+              <a href="https://www.active.com/triathlon/articles/proper-breathing-technique-for-swimming-875008" 
               target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> interval training</a>
+              <MDBIcon icon='clone left' /> Breathing Technique</a>
             
         
+              
+            </div>
+          </div>
+        </MDBCard>
+
+        
+
+      </MDBCol>
+
+
+      <MDBCol md='4'>
+      <MDBCard
+          className=''
+          style={{
+            
+            margin: "20px"
+
+          
+            
+
+        }}
+        >
+          <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
+            <div>
+              <h5 className='black-text'>
+              <MDBIcon icon='swimmer' /> Thursday
+              </h5>
+              <MDBCardTitle tag='h3' className='pt-2'>
+                <strong>This is card title</strong>
+              </MDBCardTitle>
+              <p className="dark-grey-text">
+                15 x 50 meters with 15 sec rest<br></br>
+                10 x 25 sprints<br></br>
+                4 x 200 <br></br>
+              </p>
+              
+          
+
+              <a href="https://www.enjoy-swimming.com/freestyle-swimming-technique.html" 
+              target="_blank" class="stretched-link btn btn-default">  
+              <MDBIcon icon='clone left' /> Freestyle techniques</a>
+            
+
+              
+            </div>
+          </div>
+        </MDBCard>
+
+        
+
+      </MDBCol>
+
+      <MDBCol md='4'>
+      <MDBCard
+          className=''
+          style={{
+            
+            margin: "20px"
+
+          
+            
+
+        }}
+        >
+          <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
+            <div>
+              <h5 className='black-text'>
+              <MDBIcon icon='swimmer' /> Friday
+              </h5>
+              <MDBCardTitle tag='h3' className='pt-2'>
+                <strong>This is card title</strong>
+              </MDBCardTitle>
+              <p className="dark-grey-text">
+                15 x 50 meters with 20 sec rest<br></br>
+                10 x 25 sprints<br></br>
+                4 x 200 <br></br>
+              </p>
              
-            </div>
-          </div>
-        </MDBCard>
-
-        
-
-      </MDBCol>
-
-
-      <MDBCol md='4'>
-      <MDBCard
-          className=''
-          style={{
-            
-            margin: "20px"
-
           
-            
-
-        }}
-        >
-          <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
-            <div>
-              <h5 className='black-text'>
-                <MDBIcon icon='running' /> Thursday
-              </h5>
-              <MDBCardTitle tag='h3' className='pt-2'>
-                <strong>This is card title</strong>
-              </MDBCardTitle>
-              <p className="dark-grey-text">
-                Run 2 miles<br></br>
-                Walk 1 mile<br></br>
-                4 sprints for 15 seconds<br></br>
-                
-              </p>
-              
-              <a href="https://www.runnersworld.com/beginner/a20811257/proper-running-form-0/" 
+        
+              <a href="https://www.teamusa.org/USA-Triathlon/News/Blogs/Multisport-Lab/2012/May/29/simple-swim-workouts" 
               target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> Running form</a>
-            
-              
-        
-              
-            </div>
-          </div>
-        </MDBCard>
-
-        
-
-      </MDBCol>
-
-      <MDBCol md='4'>
-      <MDBCard
-          className=''
-          style={{
-            
-            margin: "20px"
-
-          
-            
-
-        }}
-        >
-          <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
-            <div>
-              <h5 className='black-text'>
-                <MDBIcon icon='running' /> Friday
-              </h5>
-              <MDBCardTitle tag='h3' className='pt-2'>
-                <strong>This is card title</strong>
-              </MDBCardTitle>
-              <p className="dark-grey-text">
-                Run 3 miles<br></br>
-                Walk 1 mile<br></br>
-                4 sprints for 15 seconds<br></br>
-                
-              </p>
-              
-              <a href="https://flipbelt.com/blog/breathing-running" 
-              target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> Running form</a>
-            
-        
-              
+              <MDBIcon icon='clone left' /> New Workouts</a>
             </div>
           </div>
         </MDBCard>
@@ -252,4 +251,4 @@ const workout1 = () => {
     );
 };
 
-export default workout1;
+export default workout6;

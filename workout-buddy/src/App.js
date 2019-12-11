@@ -8,7 +8,10 @@ import WorkoutsPage from './components/WorkoutsPage';
 import StrongLiftsPage from './components/Workout Pages/workout0';
 import BeginnerRunningPage from './components/Workout Pages/workout1';
 import BeginnerBoxingPage from './components/Workout Pages/workout2';
-
+import BeginnerSwimmingPage from './components/Workout Pages/workout3';
+import AdvancedRunningPage from './components/Workout Pages/workout4';
+import AdvancedBoxingPage from './components/Workout Pages/workout5';
+import AdvancedSwimmingPage from './components/Workout Pages/workout6';
 import {
   BrowserRouter as Router,
   Switch,
@@ -50,6 +53,20 @@ function App() {
           <Route path="/workout2">
             <BeginnerBoxingPage />
           </Route>
+          <Route path="/workout3">
+            <BeginnerSwimmingPage />
+          </Route>
+          <Route path="/workout4">
+            <AdvancedRunningPage />
+          </Route>
+          <Route path="/workout5">
+            <AdvancedBoxingPage />
+          </Route>
+          <Route path="/workout6">
+            <AdvancedSwimmingPage />
+          </Route>
+          
+
 
         </Switch>
     </Router>

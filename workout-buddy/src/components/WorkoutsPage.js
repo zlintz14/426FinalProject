@@ -4,7 +4,7 @@ import WorkoutSearch from './WorkoutSearch';
 
 function WorkoutsPage(props) {
     return (
-        <div className="workoutsPageBody">
+        <div className="workoutsPageBody" style={{height: "100vh"}}>
             <Navbar />
             <WorkoutSearch />
         </div>

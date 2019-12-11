@@ -3,7 +3,7 @@ import Navbar from '../Navbar';
 import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCardTitle, MDBCardImage, MDBCardBody, MDBCardText } from "mdbreact";
 import { MDBCard,  MDBBtn } from 'mdbreact';
 import { Link } from 'react-router-dom';
-const workout1 = () => {
+const workout2 = () => {
     return (
         <div>
             <Navbar />
@@ -12,23 +12,23 @@ const workout1 = () => {
                     <MDBCol>
                     <MDBJumbotron className="text-center ">
                         <MDBCardTitle className="card-title h4 pb-2">
-                        <strong>Beginner's Running Plan</strong>
+                        <strong>Advanced Boxing Workout</strong>
                         </MDBCardTitle>
 
                         <MDBCardImage
-                        src="https://images.squarespace-cdn.com/content/v1/54faf350e4b0f473c20ce261/1425940917937-6JJ94AP6KCHPEQLL63SW/ke17ZwdGBToddI8pDm48kHH9S2ID7_bpupQnTdrPcoF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RRB5rUELEv7EY2n0AZOrEupxpSyqbqKSgmzcCPWV5WMiQ/running+image+2.jpg?format=1500w"
+                        src="https://wallpaperaccess.com/full/308647.jpg"
                         className="img-fluid card-img-top"
                         />
                         <MDBCardBody>
                         <MDBCardTitle className="black-text h5 m-4">
-                            Easy way to start running
+                            Boxing
                         </MDBCardTitle>
                         <MDBCardText>
-                        Running is a great way to get fit, feel better and even form new relationships with other runners. Starting a new running habit doesn’t have to be hard — all it takes is a comfortable pair of shoes and a willingness to move a little or a lot, all at your own pace. The Well Guide makes it easy to get started, get inspired and stay on track. Are you ready? Let’s go!
+                        What is the best boxing workout? A boxing workout can increase endurance, strength, and speed. Our forum members have put together great workouts, talk about different methods, myths, and what kind of workouts they followed. Try them out!
                             <br/>
                             <br/>
 
-                            
+                            Boxing can help to improve your cardio stamina, endurance, balance, and coordination.
                         </MDBCardText>
 
                         <MDBCol className="d-flex justify-content-center mt-4" md="12">
@@ -60,21 +60,22 @@ const workout1 = () => {
           <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
             <div>
               <h5 className='black-text'>
-                <MDBIcon icon='running' /> Monday
+                 Monday
               </h5>
               <MDBCardTitle tag='h3' className='pt-2'>
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 1 mile<br></br>
-                Walk 1 mile<br></br>
-                Sprint 10 seconds, walk 30 seconds 5x<br></br>
-                
+                Run 2 mile<br></br>
+                3-minute round: Basic jab, cross, and hook punches<br></br>
+                Rest 30 seconds x8<br></br>
+                3-minute round: Speed punches<br></br>
+                Rest 30 seconds x8<br></br>
               </p>
               
-              <a href="https://www.runnersworld.com/nutrition-weight-loss/a20853304/what-do-i-eat-before-my-race/" 
+              <a href="https://expertboxing.com/the-perfect-boxing-stance" 
               target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> food before a run</a>
+              <MDBIcon icon='clone left' /> boxing stance</a>
             
         
               
@@ -97,23 +98,24 @@ const workout1 = () => {
           <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
             <div>
               <h5 className='black-text'>
-                <MDBIcon icon='bed' /> Tuesday
+                 Tuesday
               </h5>
               <MDBCardTitle tag='h3' className='pt-2'>
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Rest<br></br>
-                <br></br>
-                <br></br>
+              3-minute round on heavy bag x5<br></br>
+              3-minute round on speed bag x5<br></br>
+              10 pushups, 10 jump squats x5<br></br>
+              200 situps<br></br>
               </p>
               
-              <a href="https://www.theactivetimes.com/why-rest-days-are-just-important-working-out" 
+              <a href="https://www.builtlean.com/2011/02/10/active-rest-in-between-exercises-makes-a-difference/" 
               target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> Refule with rest</a>
+              <MDBIcon icon='clone left' /> importance of active rest</a>
             
-              
         
+             
             </div>
           </div>
         </MDBCard>
@@ -134,16 +136,17 @@ const workout1 = () => {
           <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
             <div>
               <h5 className='black-text'>
-                <MDBIcon icon='running' /> Wednesday
+                 Wednesday
               </h5>
               <MDBCardTitle tag='h3' className='pt-2'>
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
-                Run 1.5 mile<br></br>
-                Walk .5 mile<br></br>
-                Sprint 10 seconds, walk 30 seconds 10x<br></br>
                 
+              3-minute round speed punches x5 <br></br>
+              3-minute hard punches x5<br></br>
+              Run 2 mile<br></br>
+              200 situps<br></br>
               </p>
               
               <a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/interval-training/art-20044588" 
@@ -151,7 +154,7 @@ const workout1 = () => {
               <MDBIcon icon='clone left' /> interval training</a>
             
         
-             
+              
             </div>
           </div>
         </MDBCard>
@@ -176,66 +179,66 @@ const workout1 = () => {
           <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
             <div>
               <h5 className='black-text'>
-                <MDBIcon icon='running' /> Thursday
-              </h5>
-              <MDBCardTitle tag='h3' className='pt-2'>
-                <strong>This is card title</strong>
-              </MDBCardTitle>
-              <p className="dark-grey-text">
-                Run 2 miles<br></br>
-                Walk 1 mile<br></br>
-                4 sprints for 15 seconds<br></br>
-                
-              </p>
-              
-              <a href="https://www.runnersworld.com/beginner/a20811257/proper-running-form-0/" 
-              target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> Running form</a>
-            
-              
-        
-              
-            </div>
-          </div>
-        </MDBCard>
-
-        
-
-      </MDBCol>
-
-      <MDBCol md='4'>
-      <MDBCard
-          className=''
-          style={{
-            
-            margin: "20px"
-
-          
-            
-
-        }}
-        >
-          <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
-            <div>
-              <h5 className='black-text'>
-                <MDBIcon icon='running' /> Friday
+                 Thursday
               </h5>
               <MDBCardTitle tag='h3' className='pt-2'>
                 <strong>This is card title</strong>
               </MDBCardTitle>
               <p className="dark-grey-text">
                 Run 3 miles<br></br>
-                Walk 1 mile<br></br>
-                4 sprints for 15 seconds<br></br>
-                
+                5 rounds shadow box<br></br>
+                7 rounds of<br></br>
+                6 sprints for 15 seconds<br></br>
               </p>
               
-              <a href="https://flipbelt.com/blog/breathing-running" 
+          
+
+              <a href="https://expertboxing.com/how-to-slip-punches" 
               target="_blank" class="stretched-link btn btn-default">  
-              <MDBIcon icon='clone left' /> Running form</a>
+              <MDBIcon icon='clone left' /> interval training</a>
             
-        
+
               
+            </div>
+          </div>
+        </MDBCard>
+
+        
+
+      </MDBCol>
+
+      <MDBCol md='4'>
+      <MDBCard
+          className=''
+          style={{
+            
+            margin: "20px"
+
+          
+            
+
+        }}
+        >
+          <div className=' card text-white text-center d-flex align-items-center rgba-white-strong py-5 px-4'>
+            <div>
+              <h5 className='black-text'>
+                 Friday
+              </h5>
+              <MDBCardTitle tag='h3' className='pt-2'>
+                <strong>This is card title</strong>
+              </MDBCardTitle>
+              <p className="dark-grey-text">
+                Run 3 mile<br></br>
+                3-minute round speed punches x5<br></br>
+                5-minute rounds of slips and jabs only x5<br></br>
+                Plank 1 min x5<br></br>
+              </p>
+             
+          
+        
+              <a href="http://www.westsidemma.net/single-post/2016/04/24/12-Sparring-Tips-That-Will-Make-You-Better" 
+              target="_blank" class="stretched-link btn btn-default">  
+              <MDBIcon icon='clone left' /> sparring tips</a>
             </div>
           </div>
         </MDBCard>
@@ -252,4 +255,4 @@ const workout1 = () => {
     );
 };
 
-export default workout1;
+export default workout2;
