@@ -17,78 +17,81 @@ function LineGraph() {
     });
   };
 
-  let addStat = function() {
-    let time = new Date();
-    axios
-      .post(
-        'http://localhost:3000/user/stats',
-        {
-          data: [
-            {
-              time: time,
-              value: time.getMilliseconds()
-            }
-          ],
-          type: 'merge'
-        },
-        {
-          headers: {
-            Authorization: 'Bearer ' + jwt //the token is a variable which holds the token
-          }
-        }
-      )
-      .then(response => {
-        console.log(response);
-      })
-      .catch(e => {
-        console.log(e);
-      });
-  };
-
   let getData = function() {
+    let maxYval = Math.max(...weightData);
     return {
       labels: labels,
+      options: {
+        spanGaps: true,
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                suggestedMin: 0,
+                suggestedMax: maxYval
+              }
+            }
+          ]
+        }
+      },
       datasets: [
         {
-          label: 'My First dataset',
+          label: 'Weights',
           fill: false,
-          lineTension: 0.1,
-          backgroundColor: 'rgba(75,192,192,0.4)',
           borderColor: variables.primary,
+          pointBackgroundColor: variables.primary,
+          pointRadius: 3,
           borderCapStyle: 'butt',
-          borderDash: [],
-          borderDashOffset: 0.0,
-          borderJoinStyle: 'miter',
-          pointBorderColor: 'rgba(75,192,192,1)',
-          pointBackgroundColor: '#fff',
-          pointBorderWidth: 1,
+          data: weightData
+        },
+        {
+          label: 'Running',
+          fill: false,
+          borderColor: variables.secondary,
+          pointBackgroundColor: variables.secondary,
           pointHoverRadius: 5,
-          pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-          pointHoverBorderColor: 'rgba(220,220,220,1)',
-          pointHoverBorderWidth: 2,
-          pointRadius: 1,
-          pointHitRadius: 10,
-          data: dataInSet
+          pointRadius: 3,
+          data: runningData
         }
       ]
     };
   };
   //   data['datasets']data[4] = 16;
   const [stats, setStats] = useState();
+  const [weightData, setWeightData] = useState();
+  const [runningData, setRunningData] = useState();
   const [labels, setLabels] = useState();
-  const [dataInSet, setDataInSet] = useState();
-  let xVals = [];
-  let yVals = [];
-
   useEffect(() => {
     console.log('stats', stats);
+    let xVals = [];
+    let yVals = [];
     if (stats) {
-      stats.forEach(stat => {
-        xVals.push(stat.time);
-        yVals.push(stat.value);
+      let lifting = stats.lifting;
+      let running = stats.running;
+      let tempLabels = [];
+      let lEntries = Object.entries(lifting);
+      let lVals = [];
+      lEntries.forEach(entry => {
+        tempLabels.push(entry[0]);
+        let justVals = entry[1].map(obj => parseInt(obj.statValue, 10));
+        lVals.push(Math.max(...justVals));
       });
-      setDataInSet(yVals);
-      setLabels(xVals);
+      setWeightData(lVals);
+      setLabels(tempLabels);
+      let rEntries = Object.entries(running);
+      let rVals = [];
+      rEntries.forEach(entry => {
+        let justVals = entry[1].map(obj => parseInt(obj.statValue, 10));
+        rVals.push(justVals.reduce((a, b) => a + b, 0));
+      });
+      console.log('rvals', rVals);
+      setRunningData(rVals);
+      //   stats.forEach(stat => {
+      //     xVals.push(stat.time);
+      //     yVals.push(stat.value);
+      //   });
+      //   setWeightData(yVals);
+      //   setLabels(xVals);
     }
   }, [stats]);
 
@@ -110,16 +113,13 @@ function LineGraph() {
   }, []);
   return (
     <div className="center-div">
-      {labels && dataInSet ? (
+      {labels && weightData ? (
         <div>
           <Line className="line-graph" data={getData()} />
         </div>
       ) : (
-        <div>Loading...</div>
+        <div>No Stats to Show Yet</div>
       )}
-      <MDBBtn className="is-primary-button" onClick={addStat}>
-        Add Today's Stats
-      </MDBBtn>
       <MDBBtn className="is-primary-button" onClick={deleteSomething}>
         Delete (for debugging purposes, need to remove)
       </MDBBtn>
