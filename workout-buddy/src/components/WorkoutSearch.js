@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 let myStorage = window.localStorage;
 const axios = require("axios");
 let jwt = myStorage.getItem("jwt");
+let tempEventData;
+let timeout;
 
 function WorkoutSearch(props) {
   // const [workoutNames, setWorkoutNames] = useState([]);
@@ -35,14 +37,14 @@ function WorkoutSearch(props) {
           "expanded": false,
           "short-description": "A beginner's running program that eases beginners into running. This is a good workout plan for both runners who have not run in a while and people who have never run before.",
           "long-description": "",
-          "readMoreLink": "asdf"
+          "readMoreLink": ""
       },
       "Beginner's Boxing Workout": {
           "id": 2,
           "type": "cardio",
           "days": [1, 2, 4, 5],
           "expanded": false,
-          "short-description": "This is a ",
+          "short-description": "This is a basic boxing training plan for beginners, great for people who have never boxed before and for people who have not boxed in a while. This workout focuses on upper body and cardiovascular endurance, working different muscle groups than running.",
           "long-description": "",
           "readMoreLink": ""
       }
@@ -82,7 +84,7 @@ function WorkoutSearch(props) {
   }
 
   let searchOnChange = (e) => {
-    let searchValue = e.currentTarget.value;
+    let searchValue = tempEventData;
     if (searchValue.length === 0) {
       setList(Object.keys(workoutsObj));
       return;
@@ -95,12 +97,11 @@ function WorkoutSearch(props) {
     }
   }
 
-  let getExpandFunction = (id) => {
-    return () => {
-      workoutsObj[id].expanded = !workoutsObj[id].expanded;
-      // setUpdate(!update);
-      forceUpdate();
-    }
+  let debounce = (e) => {
+    tempEventData = e.currentTarget.value;      
+    clearTimeout(timeout);
+    timeout = setTimeout(searchOnChange, 400);
+  
   }
 
   return (
@@ -113,7 +114,7 @@ function WorkoutSearch(props) {
         </div>
         <MDBContainer>
           <div className="active-pink-4 mb-4">
-            <input className="form-control" type="text" placeholder="Search" aria-label="Search" onChange={searchOnChange}/>
+            <input className="form-control" type="text" placeholder="Search" aria-label="Search" onChange={debounce}/>
           </div>
         </MDBContainer>
       </div>
