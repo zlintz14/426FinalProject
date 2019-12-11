@@ -42,6 +42,38 @@ function WorkoutSearch(props) {
           "expanded": false,
           "short-description": "This is a basic boxing training plan for beginners, great for people who have never boxed before and for people who have not boxed in a while. This workout focuses on upper body and cardiovascular endurance, working different muscle groups than running.",
           "readMoreLink": ""
+      },
+      "Beginner's Swimming Workout": {
+          "id": 3,
+          "type": "cardio",
+          "days": [1, 2, 4, 5],
+          "expanded": false,
+          "short-description": "This is a basic swimming training plan for people who are new to swimming, or just getting back into swimming. Swimming can be a fantastic workout for working your full body and increasing endurance",
+          "readMoreLink": ""
+      },
+      "Advanced Running Workout": {
+          "id": 4,
+          "type": "cardio",
+          "days": [1, 2, 4, 5],
+          "expanded": false,
+          "short-description": "This is an advanced running training plan for runners, great for people who have been running regularly and for people who want to increase their endurance. This workout focuses on lower body and cardiovascular endurance, working multiple muscle groups.",
+          "readMoreLink": ""
+      },
+      "Advanced Boxing Workout": {
+          "id": 5,
+          "type": "cardio",
+          "days": [1, 2, 4, 5],
+          "expanded": false,
+          "short-description": "This is an advanced boxing training plan for athletes, great for people who have boxed before and for people who have been working out regularly. This workout focuses on upper body and cardiovascular endurance, working different muscle groups than running.",
+          "readMoreLink": ""
+      },
+      "Advanced Swimming Workout": {
+          "id": 6,
+          "type": "cardio",
+          "days": [1, 2, 4, 5],
+          "expanded": false,
+          "short-description": "This is an advanced swimming training plan for swimmers, triathlon athletes, and people who wish to increase their swimming indurance. Swimming is a great full body and cardio workout that will increase endurance and strength. ",
+          "readMoreLink": ""
       }
   }
 
