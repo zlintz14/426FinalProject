@@ -73,9 +73,6 @@ function LineGraph() {
   const [runningData, setRunningData] = useState();
   const [labels, setLabels] = useState();
   useEffect(() => {
-    console.log('stats', stats);
-    let xVals = [];
-    let yVals = [];
     if (stats) {
       let deadlifting = stats.deadlifting;
       let squatting = stats.squatting;
@@ -105,7 +102,6 @@ function LineGraph() {
         let justVals = entry[1].map(obj => parseInt(obj.statValue, 10));
         rVals.push(justVals.reduce((a, b) => a + b, 0));
       });
-      console.log('rvals', rVals);
       setLabels(tempLabels);
       setRunningData(rVals);
     }
@@ -119,7 +115,6 @@ function LineGraph() {
         }
       })
       .then(response => {
-        console.log(response);
         // setStats(response)
         setStats(response.data.result);
       })
@@ -134,15 +129,14 @@ function LineGraph() {
       let justVals = entry[1].map(obj => parseInt(obj.statValue, 10));
       lVals.push(Math.max(...justVals));
     });
-    console.log(lVals);
     return lVals;
   };
 
   return (
-    <div className="center-div">
+    <div className="line-graph">
       {labels && benchData ? (
         <div>
-          <Line className="line-graph" data={getData()} />
+          <Line className="" data={getData()} />
         </div>
       ) : (
         <div>No Stats to Show Yet</div>

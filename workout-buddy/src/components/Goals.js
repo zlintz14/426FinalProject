@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { MDBContainer, MDBAlert, MDBBtn } from 'mdbreact';
+import { MDBContainer, MDBAlert, MDBBtn, MDBListGroup, MDBListGroupItem, MDBIcon } from 'mdbreact';
+import variables from '../App.scss';
 
 function Goals(props) {
   const [message, setMessage] = useState();
@@ -7,30 +8,57 @@ function Goals(props) {
   let jwt = myStorage.getItem('jwt');
   const axios = require('axios');
 
+
   useEffect(() => {
+    // axios.delete('http://localhost:3000/private/', {
+    //   headers: {
+    //     Authorization: 'Bearer ' + jwt //the token is a variable which holds the token
+    //   }
+    // });
+
+
+    // axios
+    //   .post(
+    //     `http://localhost:3000/private/goals`,
+    //     {
+    //       data: {'Run Longer': 'Run Longer'},
+    //       type: 'merge'
+    //     },
+    //     {
+    //       headers: {
+    //         Authorization: 'Bearer ' + jwt //the token is a variable which holds the token
+    //       }
+    //     }
+    //   )
+
+
     axios
-      .get('http://localhost:3000/private/message', {
+      .get('http://localhost:3000/private/goals', {
         headers: {
           Authorization: 'Bearer ' + jwt //the token is a variable which holds the token
         }
       })
       .then(response => {
-        setMessage(response.data.result);
+        console.log('response',message)
       })
-      .catch(e => {
-        console.log(e);
-      });
   }, []);
+
+  let deleteGoal = function(text){
+      console.log(text)
+  }
 
   return (
     <div>
       {message ? (
-        <MDBContainer className="mb-0 center-div" style={{'text-align':'center'}}>
+        <MDBContainer>
             <br></br>
-            <br></br>
-          <MDBBtn>Create inspirational message</MDBBtn>
-          <MDBBtn>Delete inspirational message</MDBBtn>
-<MDBAlert color="info" className="mt-2 mb-0 my-alert center-div">{message}</MDBAlert>
+          <MDBListGroup>
+            <MDBListGroupItem style={{'backgroundColor':variables.primary, 'color':'white'}}>Other Users' Goals</MDBListGroupItem>
+            <MDBListGroupItem>Dapibus ac facilisis in<i onClick={(e)=>deleteGoal.bind(this,e.target.textContent)}class="far fa-times-circle float-right pt-1"></i></MDBListGroupItem>
+            <MDBListGroupItem>Morbi leo risus</MDBListGroupItem>
+            <MDBListGroupItem>Porta ac consectetur ac</MDBListGroupItem>
+            <MDBListGroupItem>Vestibulum at eros</MDBListGroupItem>
+          </MDBListGroup>
         </MDBContainer>
       ) : (
         false
