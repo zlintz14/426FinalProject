@@ -45,8 +45,10 @@ const Testimonial = () => {
                     <br/>
                     <br/>
                     <h5>
-                    <MDBIcon icon='quote-left' style={{marginRight: "15px"}} />
+                    <MDBIcon icon='quote-left' style={{marginRight: "20px"}} />
                         {testimonial}
+                        <MDBIcon icon='quote-right' style={{marginLeft: "20px"}} />
+
                     </h5>
                     <br/>
                     <br/>
