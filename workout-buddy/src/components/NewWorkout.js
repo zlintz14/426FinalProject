@@ -181,8 +181,8 @@ function NewWorkout() {
 
   return (
     <MDBContainer>
-      <MDBBtn onClick={toggle}>Add today's exercise</MDBBtn>
-      <MDBBtn className="is-warning-button" onClick={deleteSomething}>
+      <MDBBtn onClick={toggle}className="float-left">Add today's exercise</MDBBtn>
+      <MDBBtn className="is-warning-button float-right" onClick={deleteSomething}>
         Clear Entire Stats History
       </MDBBtn>
       <MDBModal isOpen={displayed} toggle={toggle}>

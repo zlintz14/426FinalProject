@@ -4,7 +4,8 @@ import SpotifyBar from './SpotifyBar'
 import {
   MDBContainer,
 } from "mdbreact";
-import LineGraph from './LineGraph'
+import LineGraph from './LineGraph';
+import Goals from './Goals';
 
 let myStorage = window.localStorage;
 let jwt = myStorage.getItem("jwt");
@@ -38,20 +39,13 @@ function User(props) {
   }, [firstName]);
   return (
     //   <div></div>
-    <div>
+    <div className="mt-0">
       <Navbar />
-      <MDBContainer className="text-center  pt-5">
+      <Goals />
+      <MDBContainer className="text-center  pt-2">
           <h2>Welcome back, {firstName + " " + lastName}!</h2>
           <br/>
-          <h5>
-            This is your personal user page. Use the top bar to navigate to your workouts.<br/>
-            You can also track and update your workout statistics below!
-          </h5>
-          <br/>
       </MDBContainer>
-      
-      
-
       <LineGraph />
       <SpotifyBar />
       <br></br>
