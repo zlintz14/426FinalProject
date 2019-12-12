@@ -11,6 +11,7 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem
 } from 'mdbreact';
+import LineGraph from './LineGraph';
 
 function NewWorkout() {
   let myStorage = window.localStorage;
@@ -33,20 +34,23 @@ function NewWorkout() {
     setDisplayed(!displayed);
   };
 
-  let deleteSomething = function() {
+  let deleteSomething = function(e) {
+    e.preventDefault()
     axios.delete('http://localhost:3000/user/stats', {
       headers: {
         Authorization: 'Bearer ' + jwt //the token is a variable which holds the token
       }
-    });
+    }).then(response => {
+      window.location.reload()
+      });
   };
 
-  let submitStat = function() {
+  let submitStat = function(e) {
+    e.preventDefault()
     console.log('submit stat called');
-    setDisplayed(!displayed);
-    let time = new Date();
-    time = monthToString(time.getMonth()) + ' ' + time.getDate();
-    // let time = 'Dec 8'
+    // let time = new Date();
+    // time = monthToString(time.getMonth()) + ' ' + time.getDate();
+    let time = 'Dec 13';
     let type = getType(dropTitle);
     let otherTypes = getOtherTypes(type);
     axios
@@ -61,9 +65,12 @@ function NewWorkout() {
             Authorization: 'Bearer ' + jwt //the token is a variable which holds the token
           }
         }
-      )
-      .then(response => {
-        console.log(response);
+        )
+        .then(response => {
+          setDisplayed(!displayed);
+          window.location.reload()
+        //  LineGraph.forceUpdate();
+        // console.log(response);
       })
       .catch(e => {
         console.log(e);
@@ -181,8 +188,8 @@ function NewWorkout() {
 
   return (
     <MDBContainer>
-      <MDBBtn onClick={toggle}>Add today's exercise</MDBBtn>
-      <MDBBtn className="is-warning-button" onClick={deleteSomething}>
+      <MDBBtn onClick={toggle}className="float-left">Add today's exercise</MDBBtn>
+      <MDBBtn className="is-warning-button float-right" onClick={deleteSomething}>
         Clear Entire Stats History
       </MDBBtn>
       <MDBModal isOpen={displayed} toggle={toggle}>

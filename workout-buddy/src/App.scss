@@ -174,8 +174,9 @@ body {
 }
 
 .line-graph{
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 70%;
+  margin: auto;
   text-align: center;
 }
 
@@ -270,4 +271,17 @@ body {
 
 #notif-title {
   font-size: 1.25rem;
+}
+
+.my-alert{
+  max-width: 20em;
+  word-wrap: wrap break-word;
+}
+
+.goal-button:hover{
+  color: $secondary;
+}
+
+.goal-delete-button:hover{
+  color: red;
 }
