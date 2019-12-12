@@ -11,6 +11,7 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem
 } from 'mdbreact';
+import LineGraph from './LineGraph';
 
 function NewWorkout() {
   let myStorage = window.localStorage;
@@ -44,10 +45,9 @@ function NewWorkout() {
   let submitStat = function(e) {
     e.preventDefault();
     console.log('submit stat called');
-    setDisplayed(!displayed);
-    let time = new Date();
-    time = monthToString(time.getMonth()) + ' ' + time.getDate();
-    // let time = 'Dec 8'
+    // let time = new Date();
+    // time = monthToString(time.getMonth()) + ' ' + time.getDate();
+    let time = 'Dec 13';
     let type = getType(dropTitle);
     let otherTypes = getOtherTypes(type);
     axios
@@ -62,8 +62,10 @@ function NewWorkout() {
             Authorization: 'Bearer ' + jwt //the token is a variable which holds the token
           }
         }
-      )
-      .then(response => {
+        )
+        .then(response => {
+          setDisplayed(!displayed);
+          LineGraph.forceUpdate();
         // console.log(response);
       })
       .catch(e => {
