@@ -33,6 +33,14 @@ function NewWorkout() {
     setDisplayed(!displayed);
   };
 
+  let deleteSomething = function() {
+    axios.delete('http://localhost:3000/user/stats', {
+      headers: {
+        Authorization: 'Bearer ' + jwt //the token is a variable which holds the token
+      }
+    });
+  };
+
   let submitStat = function() {
     console.log('submit stat called');
     setDisplayed(!displayed);
@@ -109,7 +117,9 @@ function NewWorkout() {
 
   let dropdownOptionClicked = function(option) {
     setDropTitle(option);
-    setStatLabel(option === 'Running' ? 'Distance (miles)' : 'Max Weight (lbs)');
+    setStatLabel(
+      option === 'Running' ? 'Distance (miles)' : 'Max Weight (lbs)'
+    );
   };
   let monthToString = function(monthNumVal) {
     switch (monthNumVal) {
@@ -172,6 +182,9 @@ function NewWorkout() {
   return (
     <MDBContainer>
       <MDBBtn onClick={toggle}>Add today's exercise</MDBBtn>
+      <MDBBtn className="is-warning-button" onClick={deleteSomething}>
+        Clear Entire Stats History
+      </MDBBtn>
       <MDBModal isOpen={displayed} toggle={toggle}>
         <MDBModalHeader toggle={toggle}>{getDropdown()}</MDBModalHeader>
         <MDBModalBody>

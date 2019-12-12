@@ -9,13 +9,7 @@ function LineGraph() {
   let jwt = myStorage.getItem('jwt');
   const axios = require('axios');
 
-  let deleteSomething = function() {
-    axios.delete('http://localhost:3000/user/stats', {
-      headers: {
-        Authorization: 'Bearer ' + jwt //the token is a variable which holds the token
-      }
-    });
-  };
+ 
 
   let getData = function() {
     // let maxYval = Math.max(...weightData);
@@ -153,9 +147,6 @@ function LineGraph() {
       ) : (
         <div>No Stats to Show Yet</div>
       )}
-      <MDBBtn className="is-primary-button" onClick={deleteSomething}>
-        Delete (for debugging purposes, need to remove)
-      </MDBBtn>
       <NewWorkout />
     </div>
   );
