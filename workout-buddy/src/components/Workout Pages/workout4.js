@@ -46,7 +46,13 @@ const workout4 = () => {
 
 
 
-    <MDBRow className="justify-content-center ">
+    <MDBRow className="justify-content-center "
+    style={{
+            
+      margin: "15px",
+      
+
+  }}>
     
       <MDBCol  md='4'>
         <MDBCard
@@ -249,6 +255,11 @@ const workout4 = () => {
 
 
     </MDBRow>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
     <SpotifyBar/>
         </div>
     );

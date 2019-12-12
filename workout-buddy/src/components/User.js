@@ -40,7 +40,7 @@ function User(props) {
     //   <div></div>
     <div>
       <Navbar />
-      <MDBContainer className="text-center mt-5 pt-5">
+      <MDBContainer className="text-center  pt-5">
           <h2>Welcome back, {firstName + " " + lastName}!</h2>
           <br/>
           <h5>
@@ -49,10 +49,25 @@ function User(props) {
           </h5>
           <br/>
       </MDBContainer>
+      
+      
+
       <LineGraph />
       <SpotifyBar />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      
+
 
     </div>
+    
+   
+
+    
+
 
   );
 }
