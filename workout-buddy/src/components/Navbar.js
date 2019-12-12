@@ -29,7 +29,7 @@ const Navbar = () => {
                     <strong className="navbaritem">Workouts</strong>
                 </MDBNavbarBrand>
             </div>
-            <MDBNavbarBrand onClick={() => determineSpotifyLogoutAndLogUserOut()}>
+            <MDBNavbarBrand className="navbaritem" onClick={() => determineSpotifyLogoutAndLogUserOut()}>
                     <strong className="navbaritem">Logout</strong>
             </MDBNavbarBrand>
         </MDBNavbar>

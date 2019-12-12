@@ -161,14 +161,13 @@ body {
 .navbaritem {
   color:$secondary;
   margin-left: 0.5rem;
-
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .navbaritem:hover {
   color: $primary;
 }
-
 .center-div{
   margin: 0 auto;
   width: 50%;
