@@ -1,12 +1,18 @@
 $primary: #f8a12f;
 $secondary: #40ffa6;
+
+:export{
+  primary: $primary;
+  secondary: $secondary;
+}
+
 .App {
   text-align: center;
-  // background-color: $primary;
+ // background-color: $primary;
 }
 
 .is-primary{
-  color: $primary;
+  color: $primary !important;
 }
 
 .is-secondary{
@@ -17,7 +23,11 @@ $secondary: #40ffa6;
   background-color: $primary !important;
 }
 .is-secondary-button{
-  background-color: $secondary;
+  background-color: $secondary !important;
+}
+
+.is-warning-button{
+  background-color: #ff0000 !important;
 }
 
 .App-logo {
@@ -149,7 +159,7 @@ body {
 }
 
 .navbaritem {
-  color: $secondary;
+  color:$secondary;
   margin-left: 0.5rem;
 
   transition: 0.4s;
@@ -157,4 +167,56 @@ body {
 
 .navbaritem:hover {
   color: $primary;
+}
+
+.center-div{
+  margin: 0 auto;
+  width: 50%;
+}
+
+.line-graph{
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+
+.spotify-buttons {
+  display: flex;
+  width: 100%;
+  color: #E0E0E0
+}
+
+.spotify-login {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#spotify-controls  {
+  margin: auto;
+  margin-right: 0;
+}
+
+#spotify-logout {
+  margin-left: 30%;
+  height: 90%;
+}
+
+#song-info {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: bold;
+  font-size: 2vh;
+  height: 80%;
+  width: 30%;
+  margin: 0.25%;
+}
+
+#logged-out {
+  display: flex;
+  position: absolute;
+  left: 0px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: bold;
+  color: #37BBAD;
+
 }

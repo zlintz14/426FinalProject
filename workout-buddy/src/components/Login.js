@@ -18,10 +18,8 @@ function Login(props) {
           pass: password
         })
         .then(response => {
-          console.log(response);
           myStorage.setItem('jwt', response.data.jwt);
           let jwt = myStorage.getItem('jwt');
-          console.log(jwt);
           window.location.href = 'http://localhost:3001/user';
         })
         .catch(e => {

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Navbar from './Navbar'
+import SpotifyBar from './SpotifyBar'
 import {
   MDBContainer,
 } from "mdbreact";
+import LineGraph from './LineGraph'
 
 let myStorage = window.localStorage;
 let jwt = myStorage.getItem("jwt");
@@ -25,7 +27,6 @@ function User(props) {
         }
       })
       .then(response => {
-        console.log(response);
         setFirstName(titleCase(response.data.user.data.firstName));
         setLastName(titleCase(response.data.user.data.lastName));
         //You'll want to set states for any other properties
@@ -42,12 +43,15 @@ function User(props) {
       <MDBContainer className="text-center mt-5 pt-5">
           <h2>Welcome back, {firstName + " " + lastName}!</h2>
           <br/>
-          <h5>This is your personal user page. Use the top bar to navigate to your workouts!</h5>
+          <h5>
+            This is your personal user page. Use the top bar to navigate to your workouts.<br/>
+            You can also track and update your workout statistics below!
+          </h5>
           <br/>
       </MDBContainer>
 
-
-      
+      <LineGraph />
+      <SpotifyBar />
 
 
     </div>

@@ -3,6 +3,7 @@ import Navbar from '../Navbar';
 import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCardTitle, MDBCardImage, MDBCardBody, MDBCardText } from "mdbreact";
 import { MDBCard,  MDBBtn } from 'mdbreact';
 import { Link } from 'react-router-dom';
+import SpotifyBar from '../SpotifyBar';
 const workout3 = () => {
     return (
         <div>
@@ -263,6 +264,7 @@ const workout3 = () => {
 
 
     </MDBRow>
+    <SpotifyBar/>
         </div>
     );
 };
