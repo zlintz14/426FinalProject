@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { MDBBtn, MDBInput, MDBCard, MDBContainer } from 'mdbreact';
-// import Axios from "axios";
-
-// const createUrl = "http://localhost/3000/account";
 
 function Signup(props) {
   const [firstName, setFirstName] = useState('');
@@ -55,12 +52,10 @@ function Signup(props) {
           setErrorMessage(e.response.data.msg);
           setShowError(true);
           wasError = true;
-          console.log('catch called');
         })
         .then(() => {
           if (!wasError && allFieldsValid()) {
             window.location.href = 'http://localhost:3001/login';
-            console.log('then called');
           }
         });
     } else {

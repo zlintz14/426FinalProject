@@ -11,9 +11,6 @@ import {
 } from 'mdbreact';
 import { Link } from 'react-router-dom';
 import Axios from 'axios';
-// import Testimonials from './Testimonials';
-// import Workouts from './Workouts';
-// import PrivateFeatures from './PrivateFeatures';
 
 const axios = require('axios');
 function PublicFeatures() {
@@ -26,7 +23,6 @@ function PublicFeatures() {
 
   let renderFeatures = function(featuresObj) {
     let featArray = featuresObj.data.result;
-    // console.log(featuresObj.data.result);
 
     return (<div>
       {featArray.map((feat)=>
@@ -48,8 +44,6 @@ function PublicFeatures() {
     </div>);
   };
 
-  // setTestState({'newKey':'newValue'});
-  // console.log(testState);
   return (
     <div>
       <section className="text-center my-5 PublicFeaturesSection">

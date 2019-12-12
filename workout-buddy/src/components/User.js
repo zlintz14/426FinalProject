@@ -17,8 +17,6 @@ let titleCase = function(word) {
 function User(props) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  //You'll want to create states for any other properties
-  //you receive from the get request
   useEffect(() => {
     axios
       .get('http://localhost:3000/account/status', {
@@ -29,8 +27,6 @@ function User(props) {
       .then(response => {
         setFirstName(titleCase(response.data.user.data.firstName));
         setLastName(titleCase(response.data.user.data.lastName));
-        //You'll want to set states for any other properties
-        //you receive from the get request
       })
       .catch(e => {
         console.log(e);

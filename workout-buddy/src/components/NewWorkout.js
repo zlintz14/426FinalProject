@@ -47,9 +47,6 @@ function NewWorkout() {
 
   let submitStat = function(e) {
     e.preventDefault()
-    console.log('submit stat called');
-    // let time = new Date();
-    // time = monthToString(time.getMonth()) + ' ' + time.getDate();
     let time = 'Dec 13';
     let type = getType(dropTitle);
     let otherTypes = getOtherTypes(type);
@@ -69,8 +66,6 @@ function NewWorkout() {
         .then(response => {
           setDisplayed(!displayed);
           window.location.reload()
-        //  LineGraph.forceUpdate();
-        // console.log(response);
       })
       .catch(e => {
         console.log(e);
@@ -114,7 +109,6 @@ function NewWorkout() {
           }
         )
         .then(response => {
-          console.log(response);
         })
         .catch(e => {
           console.log(e);
@@ -172,7 +166,7 @@ function NewWorkout() {
   let getDropdown = function() {
     return (
       <MDBDropdown>
-        <MDBDropdownToggle caret className="is-primary-button">
+        <MDBDropdownToggle caret color="warning">
           {dropTitle}
         </MDBDropdownToggle>
         <MDBDropdownMenu basic>

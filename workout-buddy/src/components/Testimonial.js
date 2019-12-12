@@ -29,7 +29,6 @@ const Testimonial = () => {
                 return;
             }
             author = list[list.length - 1];
-            console.log(res.data.result);
             testimonial = res.data.result[author].review;
           setLoaded(true);
         });

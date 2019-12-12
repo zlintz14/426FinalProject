@@ -12,7 +12,6 @@ function LineGraph() {
  
 
   let getData = function() {
-    // let maxYval = Math.max(...weightData);
     return {
       labels: labels,
       options: {
@@ -22,7 +21,6 @@ function LineGraph() {
             {
               ticks: {
                 suggestedMin: 0
-                // suggestedMax: maxYval
               }
             }
           ]
@@ -65,7 +63,6 @@ function LineGraph() {
       ]
     };
   };
-  //   data['datasets']data[4] = 16;
   const [stats, setStats] = useState();
   const [benchData, setBenchData] = useState();
   const [squatData, setSquatData] = useState();
@@ -84,15 +81,6 @@ function LineGraph() {
       setSquatData(getWeightValues(squatEntries));
       setBenchData(getWeightValues(benchEntries));
       setDeadliftData(getWeightValues(deadliftEntries));
-
-
-      // let lVals = [];
-      // lEntries.forEach(entry => {
-      //   tempLabels.push(entry[0]);
-      //   let justVals = entry[1].map(obj => parseInt(obj.statValue, 10));
-      //   lVals.push(Math.max(...justVals));
-      // });
-      // setWeightData(lVals);
       
       let rEntries = Object.entries(running);
       let rVals = [];
@@ -115,7 +103,6 @@ function LineGraph() {
         }
       })
       .then(response => {
-        // setStats(response)
         setStats(response.data.result);
       })
       .catch(e => {

@@ -27,15 +27,12 @@ function Goals(props) {
       })
       .then(response => {
         setGoals(response.data.result);
-        console.log('response', response.data.result);
       });
   }, []);
 
   let deleteGoal = function(id) {
-    console.log(id);
     let tempGoals = [...goals];
     tempGoals.splice(id, 1);
-    console.log(tempGoals);
     axios
       .post(
         `http://localhost:3000/private/goals`,
@@ -56,8 +53,6 @@ function Goals(props) {
     setShowGoalInput(false);
     let tempGoals = [...goals];
     tempGoals.push(goalText);
-    console.log(tempGoals)
-    console.log(e.target.value)
     axios
       .post(
         `http://localhost:3000/private/goals`,
@@ -115,7 +110,6 @@ function Goals(props) {
               false
             )}
             {goals.map((goal, index) => (
-              // let boundItemClick = deleteGoal.bind(this, index)
               <MDBListGroupItem>
                 {goal}
                 <MDBIcon

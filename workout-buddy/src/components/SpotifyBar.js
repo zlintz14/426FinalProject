@@ -59,7 +59,6 @@ class SpotifyBar extends Component {
         spotifyWebApi.getMyCurrentPlaybackState()
             .then((response) => {
                 if (response !== undefined && response.item !== undefined) {
-                    //setTimeout(() => this.getNowPlaying(), this.response.item.duration_ms)
                     let artistStr = ""
                     let artistsArr = response.item.artists
                     for (var i = 0; i < artistsArr.length; i++) {
