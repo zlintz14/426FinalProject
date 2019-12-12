@@ -1,21 +1,10 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import Navbar from './Navbar'
 import SpotifyBar from './SpotifyBar'
 import WriteReview from './WriteReview'
-
-import {
-  MDBContainer,
-} from "mdbreact";
 import LineGraph from './LineGraph'
-=======
-import React, { useState, useEffect } from 'react';
-import Navbar from './Navbar';
-import SpotifyBar from './SpotifyBar';
 import { MDBContainer, MDBCol, MDBRow } from 'mdbreact';
-import LineGraph from './LineGraph';
 import Goals from './Goals';
->>>>>>> goals
 
 let myStorage = window.localStorage;
 let jwt = myStorage.getItem('jwt');
