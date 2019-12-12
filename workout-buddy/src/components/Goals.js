@@ -13,6 +13,7 @@ import variables from '../App.scss';
 function Goals(props) {
   const [goals, setGoals] = useState();
   const [showGoalInput, setShowGoalInput] = useState(false);
+  const [goalText, setGoalText] = useState();
   let myStorage = window.localStorage;
   let jwt = myStorage.getItem('jwt');
   const axios = require('axios');
@@ -50,12 +51,13 @@ function Goals(props) {
       .then(() => setGoals(tempGoals));
   };
 
-  let submitNewGoal = function(e,text) {
-    console.log('calling submit new')
+  let submitNewGoal = function(e) {
     e.preventDefault();
     setShowGoalInput(false);
     let tempGoals = [...goals];
-    tempGoals.push(text);
+    tempGoals.push(goalText);
+    console.log(tempGoals)
+    console.log(e.target.value)
     axios
       .post(
         `http://localhost:3000/private/goals`,
@@ -95,13 +97,20 @@ function Goals(props) {
               />
             </MDBListGroupItem>
             {showGoalInput ? (
-              <form className="mt-0 mb-0 pt-0 pb-0">
-                <MDBInput
-                  className="mt-0 mb-0"
-                  onSubmit={(e) => submitNewGoal.bind(this, e.target.value)}
-                  label="Type your goal..."
-                ></MDBInput>
-              </form>
+              <MDBListGroupItem>
+                <MDBIcon
+                  icon="times-circle"
+                  onClick={() => setShowGoalInput(false)}
+                  className="float-right pt-1 goal-delete-button"
+                />
+                <form className="mt-0 mb-0 pt-0 pb-0" onSubmit={submitNewGoal}>
+                  <MDBInput
+                    className="mt-0 mb-0"
+                    label="Type your goal..."
+                    onChange={(e)=>setGoalText(e.target.value)}
+                  ></MDBInput>
+                </form>
+                </MDBListGroupItem>
             ) : (
               false
             )}
