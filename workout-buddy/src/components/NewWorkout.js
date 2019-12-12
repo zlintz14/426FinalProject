@@ -34,16 +34,19 @@ function NewWorkout() {
     setDisplayed(!displayed);
   };
 
-  let deleteSomething = function() {
+  let deleteSomething = function(e) {
+    e.preventDefault()
     axios.delete('http://localhost:3000/user/stats', {
       headers: {
         Authorization: 'Bearer ' + jwt //the token is a variable which holds the token
       }
-    });
+    }).then(response => {
+      window.location.reload()
+      });
   };
 
   let submitStat = function(e) {
-    e.preventDefault();
+    e.preventDefault()
     console.log('submit stat called');
     // let time = new Date();
     // time = monthToString(time.getMonth()) + ' ' + time.getDate();
@@ -65,7 +68,8 @@ function NewWorkout() {
         )
         .then(response => {
           setDisplayed(!displayed);
-          LineGraph.forceUpdate();
+          window.location.reload()
+        //  LineGraph.forceUpdate();
         // console.log(response);
       })
       .catch(e => {
