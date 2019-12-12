@@ -22,6 +22,12 @@ const Testimonial = () => {
     useEffect(() => {
         axios.get('http://localhost:3000/public/reviews').then(res => {
             let list = Object.keys(res.data.result);
+            if (list.length === 0) {
+                testimonial = "There are currently no testimonials. :("
+                author = "System";
+                setLoaded(true);
+                return;
+            }
             author = list[list.length - 1];
             console.log(res.data.result);
             testimonial = res.data.result[author].review;
