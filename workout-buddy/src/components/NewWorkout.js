@@ -41,7 +41,8 @@ function NewWorkout() {
     });
   };
 
-  let submitStat = function() {
+  let submitStat = function(e) {
+    e.preventDefault();
     console.log('submit stat called');
     setDisplayed(!displayed);
     let time = new Date();
@@ -63,7 +64,7 @@ function NewWorkout() {
         }
       )
       .then(response => {
-        console.log(response);
+        // console.log(response);
       })
       .catch(e => {
         console.log(e);
