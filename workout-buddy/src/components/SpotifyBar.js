@@ -2,6 +2,9 @@ import React, { Component, setState } from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBBtn, MDBNavItem } from 'mdbreact';
 import { MDBContainer, MDBNavbarToggler, MDBCollapse, MDBNavLink, MDBIcon } from 'mdbreact';
 
+import Snackbar from '@material-ui/core/Snackbar';
+import SnackbarContent from '@material-ui/core/SnackbarContent';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faForward, faBackward, faPlayCircle, faPauseCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import Spotify from 'spotify-web-api-js';

@@ -1,6 +1,7 @@
 import React from 'react';
 import TitleScreen  from "./TitleScreen";
 import PublicFeatures  from "./PublicFeatures";
+import Testimonial from "./Testimonial";
 
 
 function FullMainPage(props) {
@@ -9,6 +10,7 @@ function FullMainPage(props) {
       <div className="App">
         <TitleScreen className="Background"/>
         <PublicFeatures className="FeaturesBackground"/>
+        <Testimonial />
       </div>  
     );
 }

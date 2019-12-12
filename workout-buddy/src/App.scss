@@ -250,3 +250,24 @@ body {
 .spotButton:active {
   color: #42f598;
 }
+
+
+// Review styles
+// .center {
+//   margin-left: 5%;
+// }
+
+.notif {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -150px;
+  z-index: 10;
+  width: 500px;
+  height: 300px;
+}
+
+#notif-title {
+  font-size: 1.25rem;
+}

@@ -67,7 +67,6 @@ function WorkoutSearch(props) {
     tempEventData = e.currentTarget.value;      
     clearTimeout(timeout);
     timeout = setTimeout(searchOnChange, 400);
-  
   }
 
   return (
