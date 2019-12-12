@@ -47,7 +47,7 @@ function User(props) {
         <MDBCol className="col-2">
           <Goals />
         </MDBCol>
-        <MDBCol className="col-10">
+        <MDBCol className="col-8">
           <LineGraph />
         </MDBCol>
       </MDBRow>
