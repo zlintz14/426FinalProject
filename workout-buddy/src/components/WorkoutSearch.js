@@ -75,21 +75,13 @@ function WorkoutSearch(props) {
       <br/>
       <div className="jumbotron jumbotron-fluid jumbotronTitle">
         <div className="container">
-          <h2 className="display-4">Daddy's Workouts</h2>
+          <h2 className="display-4"  style={{marginTop: "-1vh"}}>Daddy's Workouts</h2>
           <p className="lead">Browse our workouts below, or search for a specific workout in the search bar.</p>
         </div>
         <MDBContainer>
           <div className="active-pink-4 mb-4">
             <input className="form-control" type="text" placeholder="Search" aria-label="Search" onChange={debounce}/>
           </div>
-          {/* <MDBAutocomplete
-            data={list}
-            label="Search workouts"
-            icon="heart"
-            clear
-            id="input"
-            getValue={this.logValue}
-          /> */}
       </MDBContainer>
       </div>
       <div className="workoutview">
