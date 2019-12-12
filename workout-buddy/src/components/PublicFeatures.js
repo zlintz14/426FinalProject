@@ -143,7 +143,7 @@ function PublicFeatures() {
             <MDBCol lg="6">
               <MDBCard
                 style={{
-                  marginTop: '130px',
+                  marginTop: '3%',
                   width: '30rem',
                   marginLeft: 'auto'
                 }}
@@ -156,7 +156,7 @@ function PublicFeatures() {
               </MDBCard>
               <MDBCard
                 style={{
-                  marginTop: '130px',
+                  marginTop: '3%',
                   width: '30rem',
                   marginLeft: 'auto'
                 }}

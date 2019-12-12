@@ -52,7 +52,7 @@ const Testimonial = () => {
                     </h5>
                     <br/>
                     <br/>
-                    <h3 style={{marginLeft: "80%"}}><strong>- {author}</strong></h3>
+                    <h3 style={{marginLeft: "10%"}}><strong>- {author}</strong></h3>
                 </MDBContainer>
             </section>
             <br/>
