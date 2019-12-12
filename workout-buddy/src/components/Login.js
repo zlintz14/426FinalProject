@@ -20,6 +20,7 @@ function Login(props) {
         .then(response => {
           myStorage.setItem('jwt', response.data.jwt);
           let jwt = myStorage.getItem('jwt');
+          localStorage.setItem("userLoggedIn", true)
           window.location.href = 'http://localhost:3001/user';
         })
         .catch(e => {

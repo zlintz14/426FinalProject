@@ -14,8 +14,12 @@ class SpotifyBar extends Component {
         super(props)
 
         const params = this.getHashParams()
-        if(params.access_token) {
+        const access_token = localStorage.getItem("access_token")
+        if(params.access_token !== undefined) {
             spotifyWebApi.setAccessToken(params.access_token)
+            localStorage.setItem("access_token", params.access_token)
+        } else if(access_token !== null) {
+            spotifyWebApi.setAccessToken(access_token)
         }
 
         const loggedIn = localStorage.getItem('loggedIn')
