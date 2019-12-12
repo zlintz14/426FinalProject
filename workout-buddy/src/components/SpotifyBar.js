@@ -130,9 +130,9 @@ class SpotifyBar extends Component {
         window.location.href = 'http://localhost:8888/login'
     }
 
-    spotifyLogoutRedirect() {
-       // const url = 'https://accounts.spotify.com/en/logout'                                                                                                                                                                                                                                                                               
-      //  const spotifyLogoutWindow = window.open(url, 'Spotify Logout', 'width=700,height=500,top=40,left=40')    
+    async spotifyLogoutRedirect() {
+        const url = 'https://accounts.spotify.com/en/logout'                                                                                                                                                                                                                                                                            
+        const spotifyLogoutWindow = window.open(url, '_blank')    
         localStorage.setItem('loggedIn', "false")
         this.setState({ loggedIn: "false", loggedOut: true })  
         setTimeout(() => this.setState({ loggedOut: false }), 2500)
