@@ -48,6 +48,7 @@ function User(props) {
         </MDBCol>
       </MDBRow>
       <SpotifyBar />
+      <WriteReview />
       <br></br>
       <br></br>
       <br></br>
