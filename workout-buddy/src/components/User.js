@@ -49,11 +49,9 @@ function User(props) {
           </h5>
           <br/>
       </MDBContainer>
-<<<<<<< HEAD
       <LineGraph />
-=======
       <SpotifyBar />
->>>>>>> spotify-api
+
     </div>
 
   );
