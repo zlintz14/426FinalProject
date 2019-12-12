@@ -45,7 +45,17 @@ function User(props) {
           <h5>This is your personal user page. Use the top bar to navigate to your workouts!</h5>
           <br/>
       </MDBContainer>
+
+
+      
+
+
     </div>
+    
+   
+
+    
+
 
   );
 }
