@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from './Navbar'
+import SpotifyBar from './SpotifyBar'
 import {
   MDBContainer,
 } from "mdbreact";
@@ -42,10 +43,15 @@ function User(props) {
       <MDBContainer className="text-center mt-5 pt-5">
           <h2>Welcome back, {firstName + " " + lastName}!</h2>
           <br/>
-          <h5>This is your personal user page. Use the top bar to navigate to your workouts!</h5>
+          <h5>
+            This is your personal user page. Use the top bar to navigate to your workouts.<br/>
+            You can also track and update your workout statistics below!
+          </h5>
           <br/>
       </MDBContainer>
       <LineGraph />
+      <SpotifyBar />
+
     </div>
 
   );

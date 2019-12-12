@@ -8,7 +8,7 @@ $secondary: #40ffa6;
 
 .App {
   text-align: center;
-  // background-color: $primary;
+  background-color: $primary;
 }
 
 .is-primary{
@@ -159,7 +159,7 @@ body {
 }
 
 .navbaritem {
-  color: $secondary;
+  color:$secondary;
   margin-left: 0.5rem;
 
   transition: 0.4s;
@@ -178,4 +178,45 @@ body {
   width: 50%;
   height: 50%;
   text-align: center;
+}
+
+.spotify-buttons {
+  display: flex;
+  width: 100%;
+  color: #E0E0E0
+}
+
+.spotify-login {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#spotify-controls  {
+  margin: auto;
+  margin-right: 0;
+}
+
+#spotify-logout {
+  margin-left: 30%;
+  height: 90%;
+}
+
+#song-info {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: bold;
+  font-size: 2vh;
+  height: 80%;
+  width: 30%;
+  margin: 0.25%;
+}
+
+#logged-out {
+  display: flex;
+  position: absolute;
+  left: 0px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: bold;
+  color: #37BBAD;
+
 }
